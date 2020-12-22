@@ -8,7 +8,7 @@ const LogoutButton = () => {
   return (
     <button
     // update classname forstyling---please do not edit wrapping code--it will break user authentication
-      className=""
+      className="authenLogout btn"
       onClick={() =>
         logout({
           returnTo: window.location.origin,

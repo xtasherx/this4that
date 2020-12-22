@@ -1,37 +1,37 @@
-import {NavLink} from "react-router-dom";
+// import {NavLink} from "react-router-dom";
 import React from "react";
-import App from "../App";
+import Nav from 'react-bootstrap/Nav';
 
 const MainNav = () => (
   // update classnames for styling---please do not edit wrapping code--it will break user authentication
   // if you need to add a route for a new page copy and paste one of the navlinks below  and change the to="/your-new-path" 
   // Then go to App.js and copy and paste a ProtectedRoute and edit the new route there.
   
-  <div className="navbar-nav mr-auto">
-    <NavLink
+  <div className="navbar-nav">
+    <Nav.Link
       to="/"
       exact
-      className=""
+      className="navLink"
       activeClassName="router-link-exact-active"
     >
       Home
-    </NavLink>
-    <NavLink
+    </Nav.Link>
+    <Nav.Link
       to="/profile"
       exact
-      className=""
+      className="navLink"
       activeClassName="router-link-exact-active"
     >
       Profile
-    </NavLink>
-    <NavLink
+    </Nav.Link>
+    <Nav.Link
       to="/external-api"
       exact
-      className=""
+      className="navLink"
       activeClassName="router-link-exact-active"
     >
       External API
-    </NavLink>
+    </Nav.Link>
   </div>
 );
 
