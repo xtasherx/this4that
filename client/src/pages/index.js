@@ -1,7 +1,8 @@
-import App from "../App";
 import ExternalApi from "./external-api";
 import Home from "./home";
 import Profile from "./profile";
+
+import '../index.css';
 
 export { ExternalApi, Home, Profile };
 

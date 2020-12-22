@@ -8,7 +8,7 @@ const SignupButton = () => {
   return (
     // update classnames for styling---please do not edit wrapping code--it will break user authentication
     <button
-      className=""
+      className="authenSignup btn"
       onClick={() =>
         loginWithRedirect({
           screen_hint: "signup",
