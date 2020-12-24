@@ -1,7 +1,5 @@
 import React from "react";
 
-import ReviewCard from '../components/review-card';
-
 //Bootstrap
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
