@@ -1,6 +1,5 @@
-// import {NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import React from "react";
-import Nav from 'react-bootstrap/Nav';
 
 const MainNav = () => (
   // update classnames for styling---please do not edit wrapping code--it will break user authentication
@@ -8,30 +7,30 @@ const MainNav = () => (
   // Then go to App.js and copy and paste a ProtectedRoute and edit the new route there.
   
   <div className="navbar-nav">
-    <Nav.Link
+    <NavLink
       to="/"
       exact
       className="navLink"
       activeClassName="router-link-exact-active"
     >
       Home
-    </Nav.Link>
-    <Nav.Link
+    </NavLink>
+    <NavLink
       to="/profile"
       exact
       className="navLink"
       activeClassName="router-link-exact-active"
     >
       Profile
-    </Nav.Link>
-    <Nav.Link
+    </NavLink>
+    <NavLink
       to="/external-api"
       exact
       className="navLink"
       activeClassName="router-link-exact-active"
     >
       External API
-    </Nav.Link>
+    </NavLink>
   </div>
 );
 
