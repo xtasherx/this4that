@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ReviewCard() {
     return (
-    <div className="reviewCard mx-auto mt-3">
+    <div className="reviewCard mx-auto my-5">
 
         <div className="img-container d-flex justify-content-center">
 

@@ -7,36 +7,50 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card'
 
 //compoenents
-import ReviewCard from '../components/review-card';
+import ReviewSlide from "../components/review-slider";
 
 
 export default function Profile () {
         return(
                 <Container className="my-5">
 
-                <Row>
-                        <Col md="auto" lg={6}>
-                                <Card style={{ width: '18rem' }}>
-                                        <div className ="circle"></div>
-                                        <Card.Body>
-                                        <Card.Title>Card Title</Card.Title>
-                                        <Card.Text>
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
-                                        </Card.Text>
-                                        </Card.Body>
-                                </Card>
-                        </Col>
+                        <Card>
+                                <Row>
+                                        <Col xs={12} sm={4} md={4} lg={2}> 
+                                                <div className ="circle"></div>
+                                        </Col>
+                                        <Col xs={12} sm={8} md={8} lg={4}>
+                                                <Card.Body>
+                                                <Card.Title>Card Title</Card.Title>
+                                                <Card.Text>
+                                                Some quick example text to build on the card title and make up the bulk of
+                                                the card's content.
+                                                </Card.Text>
+                                                </Card.Body>
+                                        </Col>
+                                        <Col xs={12} sm={12} md={12} lg={4}>
+                                                <Card.Body>
+                                                <Card.Title>Skillz</Card.Title>
+                                                        <Card.Text>
+                                                        <span className="skills">Skill 1</span>
+                                                        <span className="skills">Skill 1</span>
+                                                        <span className="skills">Skill 1</span>
+                                                        <span className="skills">Skill 1</span>
+                                                        
+                                                        </Card.Text>
+                                                </Card.Body>
+                                        </Col>
+                                
 
-                        <Col md="auto" lg={6}>
+                                </Row>
 
-                        <h5 className="mb-4">Reviews </h5>
-                                <ReviewCard className="mb-2" />
-                                <ReviewCard className="mb-2" />
-                                <ReviewCard className="mb-2" />
+                                <button>Message</button> &emsp; <button>Review</button>
+                        </Card>
+                        
 
-                        </Col>
-                </Row>
+                <div className="mt-5">
+                        <ReviewSlide />  
+                </div>
 
         </Container>
         )

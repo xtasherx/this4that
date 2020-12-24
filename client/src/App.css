@@ -40,6 +40,7 @@
   background-color: pink !important;
 }
 
+
 /* Home Elements */
 
 .jumbotron{
@@ -48,19 +49,26 @@
   margin-bottom: 2em;
 }
 
+
+/* Review Slider */
 .revSlide{
-  margin: 2em 0;
-  height: auto;
-  overflow:hidden;
+  margin: 2em 0 0;
+  width: 100%;
+  margin: 0 auto;
+}
+.carousel-root, .carousel-slider, .slider-wrapper, .slide{
+  background-color: rgb(223, 223, 223) !important;
 }
 
 .reviewCard{
   text-align: center;
-  background-color: burlywood;
+  background-color:rgb(223, 223, 223);
   padding: 1em 0;
-  width: 100%;
-  min-width: 800px;
-  
+}
+
+.reviewCard button{
+  height:100%;
+  bottom:0;
 }
 
 .circle{
@@ -70,6 +78,9 @@
   background-color:bisque;
 }
 
+/* Profile */
+
+
 
 /* Footer */
 footer {
@@ -78,4 +89,40 @@ footer {
   padding: .5em 0;
   bottom: 0;
   position: relative;
+}
+
+/* 
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .revSlide{
+    width: 80%;
+  }
+  
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .revSlide{
+    width: 60%;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .revSlide{
+    width: 50%;
+  }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  
 }
