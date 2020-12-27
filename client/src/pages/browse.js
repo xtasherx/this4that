@@ -10,9 +10,10 @@ import Container from 'react-bootstrap/Container';
 import LoginButton from "../components/login-button";
 import SignupButton from "../components/signup-button";
 
-export default function Home () {
-        return(
-        <div>
+
+export default function Browse () {
+        return (
+                <div>
                 <Jumbotron fluid className="jumbotron">
                         <Container>
                                 <h1>Fluid jumbotron</h1>
@@ -22,9 +23,10 @@ export default function Home () {
                                 <LoginButton className/> &emsp;<SignupButton />
                         </Container>
                 </Jumbotron>
-                <Container>
+
+                <div>
                         <ReviewSlide />  
-                </Container>
+                </div>
         </div>
-        )
-}
+        );
+};

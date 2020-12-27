@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
-import ReactCardCarousel from 'react-card-carousel';
 
+// React Slider imports
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
+// Components
 import ReviewCard from './review-card';
 
-
 class ReviewSlide extends Component {
-
-render() {
-    return (
-        <ReactCardCarousel autoplay={ false }>
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
-    </ReactCardCarousel>
-    );
+    render() {
+        return (
+        <div className="revSlide">
+            <Carousel autoplay={ false } infiniteLoop={true} showArrows={true} showStatus={false}>
+                <ReviewCard />
+                <ReviewCard />
+                <ReviewCard />
+                <ReviewCard />
+                <ReviewCard />
+            </Carousel>
+        </div>
+        );
     }
 }
 
