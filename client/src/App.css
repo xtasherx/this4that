@@ -39,6 +39,7 @@
   background-color: pink !important;
 }
 
+
 /* Home Elements */
 
 .jumbotron{
@@ -47,6 +48,7 @@
   padding: 10em 0 !important;
 }
 
+<<<<<<< HEAD
 /* Profile Page */
 .userInfo{
   padding: 2em 0;
@@ -104,6 +106,28 @@
 /* right arrow */
 .carousel .control-next.control-arrow:before{
   border-left: 8px solid red!important;
+=======
+
+/* Review Slider */
+.revSlide{
+  margin: 2em 0 0;
+  width: 100%;
+  margin: 0 auto;
+}
+.carousel-root, .carousel-slider, .slider-wrapper, .slide{
+  background-color: rgb(223, 223, 223) !important;
+}
+
+.reviewCard{
+  text-align: center;
+  background-color:rgb(223, 223, 223);
+  padding: 1em 0;
+}
+
+.reviewCard button{
+  height:100%;
+  bottom:0;
+>>>>>>> ash
 }
 
 .setStar {
@@ -118,6 +142,7 @@
   background-color:bisque;
 }
 
+<<<<<<< HEAD
 .reviewCard{
   text-align: center;
   background-color:none;
@@ -144,6 +169,9 @@ input[type="radio"]{
   cursor: pointer;
   transition: color 200ms;
 }
+=======
+/* Profile */
+>>>>>>> ash
 
 
 
@@ -156,7 +184,10 @@ footer {
   position: relative;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ash
 /* 
 // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap */
@@ -168,18 +199,36 @@ footer {
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+<<<<<<< HEAD
 
+=======
+  .revSlide{
+    width: 80%;
+  }
+>>>>>>> ash
   
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+<<<<<<< HEAD
 
+=======
+  .revSlide{
+    width: 60%;
+  }
+>>>>>>> ash
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+<<<<<<< HEAD
 
+=======
+  .revSlide{
+    width: 50%;
+  }
+>>>>>>> ash
 }
 
 /* // XX-Large devices (larger desktops, 1400px and up) */

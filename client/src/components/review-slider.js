@@ -24,4 +24,3 @@ class ReviewSlide extends Component {
 }
 
 export default ReviewSlide;
-
