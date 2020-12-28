@@ -1,6 +1,9 @@
 import {NavLink} from "react-router-dom";
 import React from "react";
-import Nav from 'react-bootstrap/Nav';
+<<<<<<< HEAD
+=======
+// import Nav from 'react-bootstrap/Nav';
+>>>>>>> ash
 
 const MainNav = () => (
   // update classnames for styling---please do not edit wrapping code--it will break user authentication
@@ -15,6 +18,14 @@ const MainNav = () => (
       activeClassName="router-link-exact-active"
     >
       Home
+    </NavLink>
+    <NavLink
+      to="/browse"
+      exact
+      className="navLink"
+      activeClassName="router-link-exact-active"
+    >
+    Browse
     </NavLink>
     <NavLink
       to="/profile"

@@ -10,7 +10,6 @@ import Container from 'react-bootstrap/Container';
 import LoginButton from "../components/login-button";
 import SignupButton from "../components/signup-button";
 
-
 export default function Home () {
         return(
         <div>
@@ -20,15 +19,12 @@ export default function Home () {
                                 <p>
                                 This is a modified jumbotron that occupies the entire horizontal space of its parent.
                                 </p>
-                                <LoginButton />
-                                <SignupButton />
+                                <LoginButton className/> &emsp;<SignupButton />
                         </Container>
                 </Jumbotron>
-
-                <div className="revSlide mt-5">
+                <Container>
                         <ReviewSlide />  
-                </div>
+                </Container>
         </div>
-
         )
 }
