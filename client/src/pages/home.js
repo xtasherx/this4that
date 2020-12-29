@@ -4,13 +4,21 @@ import React from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
-
 export default function Home () {
         return(
-        <Container className="my-5">
-                <Row>
-                        <h1>Hello Home</h1>
-                </Row>
-        </Container>
+        <div>
+                <Jumbotron fluid className="jumbotron">
+                        <Container>
+                                <h1>Fluid jumbotron</h1>
+                                <p>
+                                This is a modified jumbotron that occupies the entire horizontal space of its parent.
+                                </p>
+                                <LoginButton className/> &emsp;<SignupButton />
+                        </Container>
+                </Jumbotron>
+                <Container>
+                        <ReviewSlide />  
+                </Container>
+        </div>
         )
 }
