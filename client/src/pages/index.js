@@ -1,5 +1,5 @@
 import ExternalApi from "./external-api";
-import Home from "./Home";
+import Home from "./home";
 import Profile from "./profile";
 import Browse from "./browse";
 import ProfileEdit from "./profile-edit";
