@@ -8,8 +8,9 @@ import { Route, Switch } from "react-router-dom";
 import Loading from "./components/Loading"
 import  NavBar  from "./components/nav-bar";
 import Footer from "./components/footer";
+
 // new pages can be exported in pages/index.js and added below 
-import { Home, Profile, ExternalApi } from "./pages";
+import { Home, Browse, Profile, ExternalApi } from "./pages";
 import { useAuth0 } from "@auth0/auth0-react";
 import ProtectedRoute from "./auth/protected-route";
 
@@ -27,6 +28,7 @@ const App = () => {
         <div>
           <Switch>
             <Route path="/" exact component={Home} />
+            <ProtectedRoute path="/browse" component={Browse} />
             <ProtectedRoute path="/profile" component={Profile} />
             <ProtectedRoute path="/external-api" component={ExternalApi} />
           </Switch>

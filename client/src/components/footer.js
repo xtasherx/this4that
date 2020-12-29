@@ -12,14 +12,19 @@ export default function Footer () {
                     {/* Footer Nav Icons */}
                 
                 <a className="mr-3" href="https://google.com/">
-                <span> < FaRegCompass /> </span>
-                <p>explore</p>
+                <span> < FaRegComments /> </span>
+                <p>home</p>
                 </a>
 
-                <a href="https://google.com/">
-                <span> < FaRegComments /> </span>
-                <p>message</p>
-                </a>
+                <a className="mr-3" href="https://google.com/">
+                <span> < FaRegCompass /> </span>
+                <p>browse</p>
+                </a>  
+                
+                <a className="mr-3" href="https://google.com/">
+                <span> < FaRegCompass /> </span>
+                <p>reviews</p>
+                </a>     
             </Row>
         </footer>
     )
