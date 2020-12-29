@@ -15,6 +15,10 @@
   padding: 0.75em 5% !important;
 }
 
+.navBar h1 {
+  color: #fff;
+}
+
 .navLink {
   color: #fff !important;
   text-decoration: none;
@@ -28,51 +32,124 @@
 
 /* Authentication buttons */
 .authenLogin {
-  background-color: yellow !important;
+  background-color: #246476 !important;
+  color: #fff !important;
+  font-weight: 600 !important;
 }
 
 .authenLogout {
-  background-color: pink !important;
+  background-color: #e9bf49 !important;
+  color: #fff !important;
+  font-weight: 600 !important;
 }
 
 .authenSignup {
-  background-color: pink !important;
+  background-color: #246476 !important;
+  color: #fff !important;
+  font-weight: 600 !important;
 }
 
 /* Home Elements */
-
 .jumbotron {
   background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/cork-board.png");
   text-align: center;
   padding: 10em 0 !important;
 }
 
+/* Profile Page */
+.userInfo {
+  padding: 4em 0 0;
+  background-color: #063044;
+}
+
+.profileCard {
+  border-radius: 5px;
+  padding: 1em;
+  background-color: #fff;
+}
+
+.profile {
+  padding: 1em;
+}
+
+.profCircle {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.edit,
+.edit:hover {
+  color: #8baec0;
+  text-decoration: none;
+}
+
+/* Profile Edit */
+.proEdit {
+  background-color: #063044;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.edit-form {
+  width: 80%;
+}
+
+.form-label,
+label {
+  color: #fff;
+}
+
+.form-control-file {
+  color: #fff;
+}
+
+/* Skill Set */
+.skillSet span {
+  background-color: #7cad3e;
+  color: #fff;
+  padding: 0.5em 10px;
+  margin: 0.5em 5px;
+  border-radius: 5px;
+}
+
 /* Review Slider */
 .revSlide {
-  margin: 2em 0 0;
-  width: 100%;
   margin: 0 auto;
+  clear: both;
 }
-.carousel-root,
+
 .carousel-slider,
 .slider-wrapper,
 .slide {
-  background-color: rgb(223, 223, 223) !important;
+  background-color: #fff !important;
+  padding: 0.25em 0 0.5em;
+  border-radius: 5px;
+}
+.carousel.carousel-slider .control-arrow:active,
+.carousel.carousel-slider .control-arrow:hover {
+  background-color: transparent !important;
 }
 
-.reviewCard {
-  text-align: center;
-  background-color: rgb(223, 223, 223);
-  padding: 1em 0;
+/* left arrow */
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid #e9bf49 !important;
 }
-
-.reviewCard button {
-  height: 100%;
-  bottom: 0;
+/* right arrow */
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid #e9bf49 !important;
 }
 
 .setStar {
   color: #ffc107;
+}
+
+.profRev {
+  background-color: #063044;
+  padding: 1em;
+}
+
+.profRev h4 {
+  color: #fff;
 }
 
 /* Review Card */
@@ -82,7 +159,64 @@
   background-color: bisque;
 }
 
-/* Profile */
+.reviewCard {
+  text-align: center;
+  background-color: none;
+  padding: 1em 0;
+  width: auto;
+}
+
+.reviewCard button {
+  height: 100%;
+  bottom: 0;
+}
+
+.reviewText {
+  width: 60%;
+}
+
+/* rating */
+input[type="radio"] {
+  display: none;
+}
+
+.star {
+  cursor: pointer;
+  transition: color 200ms;
+}
+
+/* Browse Profiles */
+
+.searchBar input {
+  width: 50%;
+  border-radius: 5px;
+  margin: 0 auto !important;
+  display: flex;
+  border: 1px solid #8baec0;
+  padding: 0.25em 1em;
+}
+
+.smCard,
+.card .btn .btn-primary,
+.smCard,
+.card .btn .btn-primary:hover,
+.smCard,
+.card .btn .btn-primary:active,
+.smCard,
+.card .btn .btn-primary:focus {
+  border: 0px none !important;
+  background-color: transparent !important;
+  border-radius: 2px;
+  height: auto;
+  margin: 1em auto;
+  width: 33.3%;
+  display: flex;
+}
+
+.smContent {
+  padding: 1em !important;
+  color: #063044;
+}
 
 /* Footer */
 footer {
@@ -91,6 +225,64 @@ footer {
   padding: 0.5em 0;
   bottom: 0;
   position: relative;
+}
+
+footer a,
+footer a:hover {
+  color: #e9bf49;
+  text-decoration: none;
+}
+
+/* Skills Input */
+
+.skill {
+  background: #ffffff;
+  border: 1px solid #d6d6d6;
+  border-radius: 2px;
+}
+
+.skill input {
+  border: none;
+  width: 100%;
+  min-width: 50px;
+}
+.skill input:focus {
+  outline: none;
+}
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.skill-list li {
+  align-items: center;
+  background: #778ca3;
+  border-radius: 2px;
+  color: #ffffff;
+  list-style: none;
+  margin: 5px;
+  padding: 5px;
+}
+.skill-list li button {
+  align-items: center;
+  background: #333333;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  font-size: 12px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  margin-left: 8px;
+  transform: rotate(45deg);
+}
+.skill-list .input-skill {
+  background: none;
+  flex-grow: 1;
 }
 
 /* 
@@ -103,23 +295,14 @@ footer {
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .revSlide {
-    width: 80%;
-  }
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .revSlide {
-    width: 60%;
-  }
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .revSlide {
-    width: 50%;
-  }
 }
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
