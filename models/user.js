@@ -4,14 +4,12 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   firstname: { type: String, required: true },
   lastname: { type: String, required: true },
-  // add regex
   email: { type: String, required: true },
   city: { type: String, required: false },
   state: { type: String, required: false },
   traveldist: { type: String, required: false },
-  // add regex 
-  phone: { type: String, required: false },
   paypaluser: {type: String, required: false},
+  phone: {type: String, required: false},
   skills: {type:Array, required: false},
   date: { type: Date, default: Date.now }
 });
