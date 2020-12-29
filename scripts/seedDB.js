@@ -10,8 +10,15 @@ mongoose.connect(
 
 const userSeed = [
   {
-    name: "Neil DeGrasse Tyson",
+    firstname: "Neil",
+    lastname: "deGrasse Tyson",
     email: "ntyson@haydenplanetarium.edu",
+    city: "New York",
+    state: "New York",
+    traveldist: "100,000 lightyears",
+    phone: "1-212-769-5100",
+    paypaluser:"ntyson",
+    skills: ["skill1","long-ass skill"],
     date: new Date(Date.now())
   }
 ];
