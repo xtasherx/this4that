@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 //Bootstrap
 import Container from 'react-bootstrap/Container';
@@ -28,6 +28,7 @@ export default function ProfileEdit () {
                 city: formObject.city,
                 state: formObject.state,
                 traveldist: formObject.traveldist,
+                paypaluser: formObject.paypaluser,
                 phone: formObject.phone
                 })
                 .then(res => someFunctionINeedToWrite())
@@ -40,7 +41,7 @@ export default function ProfileEdit () {
                 const { name, value } = event.target;
                 setFormObject({...formObject, [name]: value})
         };
-    
+        
 
         return(
         <Container className="my-5">

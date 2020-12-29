@@ -1,9 +1,6 @@
 import {NavLink} from "react-router-dom";
 import React from "react";
-<<<<<<< HEAD
-=======
 // import Nav from 'react-bootstrap/Nav';
->>>>>>> ash
 
 const MainNav = () => (
   // update classnames for styling---please do not edit wrapping code--it will break user authentication

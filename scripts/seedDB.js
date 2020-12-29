@@ -17,7 +17,8 @@ const userSeed = [
     state: "New York",
     traveldist: "100,000 lightyears",
     phone: "1-212-769-5100",
-
+    paypaluser:"ntyson",
+    skills: ["skill1","long-ass skill"],
     date: new Date(Date.now())
   }
 ];

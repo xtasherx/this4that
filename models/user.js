@@ -11,6 +11,8 @@ const userSchema = new Schema({
   traveldist: { type: String, required: false },
   // add regex 
   phone: { type: String, required: false },
+  paypaluser: {type: String, required: false},
+  skills: {type:Array, required: false},
   date: { type: Date, default: Date.now }
 });
 
