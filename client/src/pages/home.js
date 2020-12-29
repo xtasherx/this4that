@@ -1,8 +1,14 @@
 import React from "react";
 
+import ReviewSlide from "../components/review-slider";
+
 //Bootstrap
+import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
+
+//buttons
+import LoginButton from "../components/login-button";
+import SignupButton from "../components/signup-button";
 
 export default function Home () {
         return(
