@@ -3,6 +3,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
+const http = require("http");
+const server = http.createServer(app);
+const socket = require("socket.io");
+const io = socket(server);
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here
@@ -18,7 +22,15 @@ app.use(routes);
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist", { useNewUrlParser: true, useUnifiedTopology: true });
 
+//Open Socket connection via Server
+io.on("connection", socket => {
+  socket.emit("your id", socket.id);
+  socket.on("send message", body => {
+      io.emit("message", body)
+  })
+})
+
 // Start the API server
-app.listen(PORT, function() {
+server.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });

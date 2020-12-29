@@ -48,65 +48,6 @@
   padding: 10em 0 !important;
 }
 
-<<<<<<< HEAD
-/* Profile Page */
-.userInfo{
-  padding: 2em 0;
-  background-color: teal;
-}
-
-.profileCard{
-  border-radius: 5px;
-  padding: 1em;
-  background-color: #fff;
-}
-
-.profile{
-  padding: 1em;
-
-}
-
-.profCircle{
-  width: 150px;
-  border-radius: 50%;
-}
-
-
-
-
-/* Skill Set */
-.skillSet span{
-  background-color:blue;
-  color:#fff;
-  padding: .5em 10px;
-  margin: .5em 5px;
-  border-radius: 5px;
-}
-
-
-/* Review Slider */
-.revSlide{
-  margin: 0 auto;
-  clear:both;
-} 
-
-.carousel-slider, .slider-wrapper, .slide{
-  background-color: transparent !important;
-  padding: 1em 0;
-}
-.carousel.carousel-slider .control-arrow:active, 
-.carousel.carousel-slider .control-arrow:hover{
-  background-color:transparent !important;
-}
-
-/* left arrow */
-.carousel .control-prev.control-arrow:before{
-  border-right: 8px solid red!important;
-}
-/* right arrow */
-.carousel .control-next.control-arrow:before{
-  border-left: 8px solid red!important;
-=======
 
 /* Review Slider */
 .revSlide{
@@ -127,7 +68,6 @@
 .reviewCard button{
   height:100%;
   bottom:0;
->>>>>>> ash
 }
 
 .setStar {
@@ -142,36 +82,7 @@
   background-color:bisque;
 }
 
-<<<<<<< HEAD
-.reviewCard{
-  text-align: center;
-  background-color:none;
-  padding: 1em 0;
-  width:auto;
-}
-
-.reviewCard button{
-  height:100%;
-  bottom:0;
-}
-
-.reviewText{
-  width: 60%;
-}
-
-
-/* rating */
-input[type="radio"]{
-  display:none;
-}
-
-.star {
-  cursor: pointer;
-  transition: color 200ms;
-}
-=======
 /* Profile */
->>>>>>> ash
 
 
 
@@ -184,10 +95,6 @@ footer {
   position: relative;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> ash
 /* 
 // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap */
@@ -199,36 +106,24 @@ footer {
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-<<<<<<< HEAD
-
-=======
   .revSlide{
     width: 80%;
   }
->>>>>>> ash
   
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-<<<<<<< HEAD
-
-=======
   .revSlide{
     width: 60%;
   }
->>>>>>> ash
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-<<<<<<< HEAD
-
-=======
   .revSlide{
     width: 50%;
   }
->>>>>>> ash
 }
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
