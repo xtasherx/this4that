@@ -11,7 +11,8 @@ import ProfileCard from '../components/profile-card'
 import Skills from '../components/skills'
 import ReviewSlider from '../components/review-slider';
 
-export default function Home () {
+
+export default function Profile () {
         return(
                 <div className="userInfo">
                 <Container>
