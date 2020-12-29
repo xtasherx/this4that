@@ -13,6 +13,9 @@ import Skills from '../components/skills'
 import ReviewSlider from '../components/review-slider';
 import Footer from '../components/footer'
 
+// icons
+import { FaPen } from "react-icons/fa";
+
 export default function Profile () {
         return(
                 <>
@@ -27,11 +30,11 @@ export default function Profile () {
                                         className="edit"
                                         activeClassName="router-link-exact-active"
                                         >
-                                        Edit Profile
+                                        < FaPen size={15} />&ensp;Edit Profile
                                         </NavLink>
                                 </Row>
                                 <Row>
-                                        <Col>
+                                        <Col md="7">
                                         <ProfileCard />
                                         </Col>
                                         <Col>
@@ -44,7 +47,7 @@ export default function Profile () {
                         </div>
 
                         <Row className="profRev">
-                                <h4 className="mt-3 pb-2 mx-auto">Reviews </h4>
+                                <h4 className="mt-3 pb-2 mx-auto">Reviews</h4>
                                 <ReviewSlider />
                         </Row>
                 </Container>

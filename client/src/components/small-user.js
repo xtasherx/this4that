@@ -25,10 +25,11 @@ export default function SmUser () {
             <Button className="smCard">
             <Card className="smContent" >
                 <div className="img-container justify-content-center" >
-                    <img src={ picture } className="profCircle" alt={name} />
+                    <img src={ picture } className="circle" alt={name} />
                 </div>
                 <div>
                     <h4 className="mt-2">{ name }</h4>
+                    <p>City, State</p>
                     <div className="setStar">
                     {[...Array(5)].map((star) => {
                         return ( 

@@ -20,10 +20,13 @@ export default function ProfileCard () {
             <img src= { picture } alt={name} className="profCircle" />
             <Card.Body>
                 <Card.Title>{ name }</Card.Title>
+                <Card.Text><p>City, State</p></Card.Text>
                 <StarRating />
-                    <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
+                    <Card.Text className="mt-4">
+                        <h5>Bio</h5>
+                        <p>Some quick example text to build on the card title and make up the bulk of
+                        the card's content.
+                        </p>
                     </Card.Text>
             </Card.Body>
         </Card>
