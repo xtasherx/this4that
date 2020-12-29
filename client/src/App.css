@@ -15,6 +15,10 @@
   padding: .75em 5% !important;
 }
 
+.navBar h1 {
+  color: #fff;
+}
+
 .navLink {
   color: #fff !important;
   text-decoration: none;
@@ -28,31 +32,35 @@
 
  /* Authentication buttons */
 .authenLogin{
-  background-color: yellow !important;
+  background-color: #246476 !important;
+  color:#fff !important;
+  font-weight: 600!important;
 }
 
 .authenLogout{
-  background-color: pink !important;
+  background-color: #E9BF49 !important;
+  color:#fff !important;
+  font-weight: 600 !important;
 }
 
 .authenSignup{
-  background-color: pink !important;
+  background-color: #246476 !important;
+  color:#fff !important;
+  font-weight: 600 !important;
 }
 
 
 /* Home Elements */
-
 .jumbotron{
   background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/cork-board.png');
   text-align: center;
   padding: 10em 0 !important;
 }
 
-<<<<<<< HEAD
 /* Profile Page */
 .userInfo{
-  padding: 2em 0;
-  background-color: teal;
+  padding: 4em 0 0;
+  background-color:#063044;
 }
 
 .profileCard{
@@ -63,7 +71,6 @@
 
 .profile{
   padding: 1em;
-
 }
 
 .profCircle{
@@ -71,12 +78,35 @@
   border-radius: 50%;
 }
 
+.edit, .edit:hover{
+  color: #8baec0;
+  text-decoration: none;
+}
+
+/* Profile Edit */
+.proEdit{
+  background-color: #063044;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.edit-form{
+  width: 80%;
+}
+
+.form-label, label{
+  color:#fff;
+}
+
+.form-control-file{
+  color: #fff;
+}
 
 
 
 /* Skill Set */
 .skillSet span{
-  background-color:blue;
+  background-color:#7CAD3E; 
   color:#fff;
   padding: .5em 10px;
   margin: .5em 5px;
@@ -91,8 +121,9 @@
 } 
 
 .carousel-slider, .slider-wrapper, .slide{
-  background-color: transparent !important;
-  padding: 1em 0;
+  background-color: #fff !important;
+  padding: .25em 0 .5em;
+  border-radius: 5px;
 }
 .carousel.carousel-slider .control-arrow:active, 
 .carousel.carousel-slider .control-arrow:hover{
@@ -101,39 +132,25 @@
 
 /* left arrow */
 .carousel .control-prev.control-arrow:before{
-  border-right: 8px solid red!important;
+  border-right: 8px solid #E9BF49!important;
 }
 /* right arrow */
 .carousel .control-next.control-arrow:before{
-  border-left: 8px solid red!important;
-=======
-
-/* Review Slider */
-.revSlide{
-  margin: 2em 0 0;
-  width: 100%;
-  margin: 0 auto;
-}
-.carousel-root, .carousel-slider, .slider-wrapper, .slide{
-  background-color: rgb(223, 223, 223) !important;
-}
-
-.reviewCard{
-  text-align: center;
-  background-color:rgb(223, 223, 223);
-  padding: 1em 0;
-}
-
-.reviewCard button{
-  height:100%;
-  bottom:0;
->>>>>>> ash
+  border-left: 8px solid #E9BF49!important;
 }
 
 .setStar {
   color: #ffc107;
 }
 
+.profRev{
+  background-color:#063044;
+  padding:1em;
+}
+
+.profRev h4{
+  color:#fff;
+}
 
 /* Review Card */
 .circle{
@@ -142,7 +159,6 @@
   background-color:bisque;
 }
 
-<<<<<<< HEAD
 .reviewCard{
   text-align: center;
   background-color:none;
@@ -169,10 +185,36 @@ input[type="radio"]{
   cursor: pointer;
   transition: color 200ms;
 }
-=======
-/* Profile */
->>>>>>> ash
 
+
+/* Browse Profiles */
+
+.searchBar input{
+  width: 50%;
+  border-radius: 5px;
+  margin: 0 auto !important;
+  display: flex;
+  border: 1px solid #8baec0;
+  padding: .25em 1em;
+}
+
+.smCard, .card .btn .btn-primary,
+.smCard, .card .btn .btn-primary:hover,
+.smCard, .card .btn .btn-primary:active,
+.smCard, .card .btn .btn-primary:focus {
+  border: 0px none !important;
+  background-color: transparent !important;
+  border-radius: 2px;
+  height: auto;
+  margin: 1em auto;
+  width: 33.3%;
+  display: flex;
+}
+
+.smContent{
+  padding: 1em !important;
+  color:#063044;
+}
 
 
 /* Footer */
@@ -184,10 +226,67 @@ footer {
   position: relative;
 }
 
-<<<<<<< HEAD
+footer a, footer a:hover{
+  color: #E9BF49;
+  text-decoration: none;
+}
 
-=======
->>>>>>> ash
+
+/* Skills Input */
+
+.skill{
+  background: #ffffff;
+  border: 1px solid #d6d6d6;
+  border-radius: 2px;
+}
+
+.skill input{
+  border: none;
+  width: 100%;
+  min-width: 50px;
+}
+.skill input:focus{
+  outline: none;
+}
+.skill-list{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.skill-list li{
+  align-items: center;
+  background: #778ca3;
+  border-radius: 2px;
+  color: #ffffff;
+  list-style: none;
+  margin: 5px;
+  padding: 5px;
+}
+.skill-list li button{
+  align-items: center;
+  background: #333333;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  font-size: 12px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  margin-left: 8px;
+  transform: rotate(45deg);
+}
+.skill-list .input-skill{
+  background: none;
+  flex-grow: 1;
+}
+
+
+
+
 /* 
 // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap */
@@ -199,36 +298,15 @@ footer {
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
-<<<<<<< HEAD
-
-=======
-  .revSlide{
-    width: 80%;
-  }
->>>>>>> ash
   
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-<<<<<<< HEAD
-
-=======
-  .revSlide{
-    width: 60%;
-  }
->>>>>>> ash
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-<<<<<<< HEAD
-
-=======
-  .revSlide{
-    width: 50%;
-  }
->>>>>>> ash
 }
 
 /* // XX-Large devices (larger desktops, 1400px and up) */

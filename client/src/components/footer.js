@@ -3,7 +3,7 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 
 // icons
-import { FaRegComments, FaRegCompass } from "react-icons/fa";
+import { FaComments, FaDollarSign, FaPenSquare } from "react-icons/fa";
 
 export default function Footer () {
     return(
@@ -11,18 +11,18 @@ export default function Footer () {
             <Row className="d-inline-flex">
                     {/* Footer Nav Icons */}
                 
-                <a className="mr-3" href="https://google.com/">
-                <span> < FaRegComments /> </span>
-                <p>home</p>
+                <a className="mr-5" href="https://google.com/">
+                <span> < FaComments size={25} /> </span>
+                <p>message</p>
                 </a>
 
-                <a className="mr-3" href="https://google.com/">
-                <span> < FaRegCompass /> </span>
-                <p>browse</p>
+                <a className="mr-5" href="https://google.com/">
+                <span> < FaDollarSign size={25} /> </span>
+                <p>pay</p>
                 </a>  
                 
-                <a className="mr-3" href="https://google.com/">
-                <span> < FaRegCompass /> </span>
+                <a href="https://google.com/">
+                <span> < FaPenSquare size={25} /> </span>
                 <p>reviews</p>
                 </a>     
             </Row>
