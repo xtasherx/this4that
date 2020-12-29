@@ -1,32 +1,26 @@
-import React from "react";
+import React from 'react';
 
-import ReviewSlide from "../components/review-slider";
+// Import Components
+import NavBar from '../components/nav-bar';
+import Search from '../components/nav-search';
+import SmUser from '../components/small-user';
 
 //Bootstrap
-import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
-
-//buttons
-import LoginButton from "../components/login-button";
-import SignupButton from "../components/signup-button";
 
 
 export default function Browse () {
         return (
-                <div>
-                <Jumbotron fluid className="jumbotron">
-                        <Container>
-                                <h1>Fluid jumbotron</h1>
-                                <p>
-                                This is a modified jumbotron that occupies the entire horizontal space of its parent.
-                                </p>
-                                <LoginButton className/> &emsp;<SignupButton />
-                        </Container>
-                </Jumbotron>
-
-                <div>
-                        <ReviewSlide />  
+                <>
+                <NavBar />
+                <div className="proEdit">
+                <Container className="pt-4">
+                        <div className ="searchBar my-3" >
+                                <Search />
+                        </div>
+                        <SmUser />
+                </Container>
                 </div>
-        </div>
+                </>
         );
 };
