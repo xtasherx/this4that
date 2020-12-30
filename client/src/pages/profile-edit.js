@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 
 //Bootstrap
 import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form'
@@ -15,7 +14,11 @@ import API from "../utils/API";
 import NavBar from '../components/nav-bar';
 import InputSkill from '../components/input-skills'
 
+// authentication
+import { useAuth0 } from "@auth0/auth0-react";
+
 export default function ProfileEdit () {
+
         // pulls in user info returned from Auth0 to pass to db 
         const { user } = useAuth0();
         const { given_name, family_name, email, picture, name} = user;
@@ -62,42 +65,36 @@ export default function ProfileEdit () {
                         <Container className="pt-5">
                                 <Form className="edit-form mx-auto">
                                 <img src= { picture } alt={name} className="rounded-circle img-fluid mb-2" />
-                                <h3>{ name }</h3>
+                                <h2>{ name }</h2>
                                 <h6 className="mb-5">{email}</h6>
+          
                                 <Form.Row>
-                                        <div className="mb-3">
-                                        <Form.File id="formcheck-api-regular">
-                                        <Form.Label>Profile Picture</Form.Label>
-                                        <Form.File.Input />
-                                        </Form.File>
-                                        </div>
+                                        <Form.Group as={Col} md="6" controlId="formPhoto">
+                                            <div className="mb-3">
+                                            <Form.File id="formcheck-api-regular">
+                                            <Form.Label>Profile Picture</Form.Label>
+                                            <Form.File.Input />
+                                            </Form.File>
+                                            </div>
+                                        </Form.Group> 
                                 </Form.Row>
-                                {/* <Form.Row>
-                                        <Form.Group as={Col} controlId="formEmail">
-                                        <Form.Label>Email Address</Form.Label>
-                                        <Form.Control type="email" placeholder={email} disabled/>
-                                        </Form.Group>
-                                        <Form.Group as={Col} controlId="formName">
-                                        <Form.Label>Name</Form.Label>
-                                        <Form.Control type="name" placeholder={name} disabled/>
-                                        </Form.Group>
-                                </Form.Row> */}
+    
                                 <Form.Row>
-                                        <Form.Group as={Col} controlId="formEmail">
+                                        <Form.Group as={Col} md="6" controlId="formPayPal">
                                         <Form.Label>PayPal UserName</Form.Label>
                                         <Form.Control type="text" placeholder="User Name" name="paypaluser" onChange={handleInputChange}/>
                                         </Form.Group>
-                                        <Form.Group as={Col} controlId="formPhoneNumber">
+                                        <Form.Group as={Col} md="6" controlId="formPhoneNumber">
                                         <Form.Label>Phone</Form.Label>
                                         <Form.Control type="phone" placeholder="Phone Number" name="phone" onChange={handleInputChange}/>
                                         </Form.Group>
                                 </Form.Row>
                                 <Form.Row>
-                                        <Form.Group as={Col} controlId="formGridCity">
+                                        <Form.Group as={Col} md="4" controlId="formGridCity">
                                         <Form.Label>City</Form.Label>
                                         <Form.Control type="text" name="city" onChange={handleInputChange} placeholder="City"/ >
                                         </Form.Group>
-                                        <Form.Group as={Col} controlId="formGridState">
+                                        <Form.Group as={Col} md="4" controlId="formGridState">
                                         <Form.Label>State</Form.Label>
                                         <Form.Control as="select" defaultValue="Choose..." name="state" onChange={handleInputChange}>
                                                 <option>Choose...</option>
@@ -156,17 +153,25 @@ export default function ProfileEdit () {
                                                 <option value="WY">Wyoming</option>
                                         </Form.Control>
                                         </Form.Group>
-                                        <Form.Group as={Col} controlId="formTravelDist">
+                                        <Form.Group as={Col} md="4" controlId="formTravelDist">
                                         <Form.Label>Travel Distance</Form.Label>
                                         <Form.Control type="text" placeholder="Distance" name="traveldist" onChange={handleInputChange} />
                                         </Form.Group>
-                                </Form.Row>
+                                    </Form.Row>
+          
+
+                                        <Form.Group controlId="exampleForm.ControlTextarea1">
+                                        <Form.Label>Bio</Form.Label>
+                                        <Form.Control as="textarea" rows={3} placeholder="Tell us a little about you..."/>
+                                        </Form.Group>
+          
+          
                                         <Form.Label>Barter Skills</Form.Label>
                                         <InputSkill />
                                 <Button 
                                 variant="primary" 
                                 type="submit" 
-                                className="mt-5" 
+                                className="mt-3" 
                                 onClick={handleFormSubmit} 
                                 >
                                         Submit
