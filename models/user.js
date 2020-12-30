@@ -2,9 +2,15 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  name: { type: String, required: true },
+  firstname: { type: String, required: true },
+  lastname: { type: String, required: true },
   email: { type: String, required: true },
-  synopsis: String,
+  city: { type: String, required: false },
+  state: { type: String, required: false },
+  traveldist: { type: String, required: false },
+  paypaluser: {type: String, required: false},
+  phone: {type: String, required: false},
+  skills: {type:Array, required: false},
   date: { type: Date, default: Date.now }
 });
 
