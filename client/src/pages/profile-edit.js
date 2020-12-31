@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useState } from "react";
+import { Redirect} from 'react-router';
 //Bootstrap
 import Container from 'react-bootstrap/Container';
 // import Row from 'react-bootstrap/Row';
@@ -18,32 +18,28 @@ import InputSkill from '../components/input-skills'
 export default function ProfileEdit () {
         // pulls in user info returned from Auth0 to pass to db 
         const { user } = useAuth0();
-        const { given_name, family_name, email, picture, name} = user;
-        const [users, setUsers] = useState([]);
+        const { given_name, family_name, email, picture, name, sub} = user;
+        const [toProfile,setToProfile] = useState(false);
+
         //user info typed into form to pass to db
         const [formObject, setFormObject] = useState({})
-
-        const someFunctionINeedToWrite = () => {
-                console.log("I'm a callback function")
+        console.log(useAuth0());
+        const profileRedirect = () => {
+                setToProfile(true);       
         }
-        // skeleton for function that sends new profile info to db 
-        // need to pass user entered info to this function as well 
-        function handleFormSubmit(event) {
-                event.preventDefault();
-                if (email) {
-                API.saveUser({
-                firstname: given_name,
-                lastname: family_name,
-                email: email,
+        // Updates the user in the database with form data. 
+        // routes back to profile.js
+        function handleFormSubmit(event) {   
+                event.preventDefault();  
+                API.updateUser(sub,{
                 city: formObject.city,
                 state: formObject.state,
                 traveldist: formObject.traveldist,
                 paypaluser: formObject.paypaluser,
                 phone: formObject.phone
                 })
-                .then(res => someFunctionINeedToWrite())
-                .catch(err => console.log(err));
-                }
+                .then( profileRedirect )
+                .catch(err => console.log(err));    
         };
 
           // Handles updating component state when the user types into the input field
@@ -55,8 +51,9 @@ export default function ProfileEdit () {
 
         return(
 
-
+                // path needs to be changed to /profile/:id once you figure that out 
                 <>
+                {toProfile ? <Redirect to ="/profile" /> : null}
                 <NavBar />
                 <div className="proEdit">
                         <Container className="pt-5">
