@@ -8,7 +8,7 @@ export default function Skills () {
     return(
     <>
         <Card className="border-0">
-            <Card.Body className="skillSet card-deck">
+            <Card.Body className="skillSet card-deck mt-3">
                 <span>Skill</span>
                 <span>Long Skill Title</span>
                 <span>Really Long Skill Title</span>
