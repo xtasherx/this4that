@@ -14,8 +14,6 @@ import API from "../utils/API";
 import NavBar from '../components/nav-bar';
 import InputSkill from '../components/input-skills'
 
-// authentication
-import { useAuth0 } from "@auth0/auth0-react";
 
 export default function ProfileEdit () {
 
