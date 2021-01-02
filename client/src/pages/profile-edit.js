@@ -42,7 +42,7 @@ export default function ProfileEdit () {
                         </Form.Row>
 
                         <Form.Row>
-                                <Form.Group as={Col} md="6" controlId="formEmail">
+                                <Form.Group as={Col} md="6" controlId="formPayPal">
                                 <Form.Label>PayPal UserName</Form.Label>
                                 <Form.Control type="text" placeholder="User Name"/>
                                 </Form.Group>
