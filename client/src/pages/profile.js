@@ -31,12 +31,12 @@ export default function Profile () {
                 console.log("User added to database.")
                 setToProfileEdit(true);       
         }
+        const [userData, setUserData] = useState({})
         // After component loads this runs to check if the user is in the db if so returns their 
         // info for us to use if not creates a user in db and routes to profile-edit.js
         useEffect(() => {
                 API.getUser(sub)
-                .then( res => {
-                        
+                .then( res => {     
                         if(!res.data){                            
                                 API.saveUser({
                                         _id: sub,
@@ -46,8 +46,10 @@ export default function Profile () {
                                         })
                                 .then(profileEditRedirect)
                                 .catch(err => console.log(err));
-                        }else{console.log(res.data)}
-
+                        }else{
+                                setUserData(res.data) ;
+                        }
+                         
                         }
                 )
                 .catch(err => console.log(err))
@@ -74,7 +76,7 @@ export default function Profile () {
                                 </Row>
                                 <Row>
                                         <Col md="7">
-                                        <ProfileCard />
+                                        <ProfileCard city={userData.city} state={userData.state} bio={userData.bio}/>
                                         </Col>
                                         <Col>
                                         <Skills />

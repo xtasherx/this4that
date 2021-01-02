@@ -15,7 +15,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 // employee info
 import portfolio from "../portfolio.json";
 
-export default function SmUser () {
+export default function SmUser (props) {
     const { user } = useAuth0();
     const { name, picture } = user; 
     
@@ -29,7 +29,7 @@ export default function SmUser () {
                 </div>
                 <div>
                     <h4 className="mt-2">{ name }</h4>
-                    <p>City, State</p>
+                    <p>{props.city}, State</p>
                     <div className="setStar">
                     {[...Array(5)].map((star) => {
                         return ( 

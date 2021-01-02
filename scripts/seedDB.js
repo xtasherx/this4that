@@ -19,6 +19,7 @@ const userSeed = [
     phone: "1-212-769-5100",
     paypaluser:"ntyson",
     skills: ["skill1","long-ass skill"],
+    bio: "Neil deGrasse Tyson is an American astrophysicist, planetary scientist, author, and science communicator. Since 1996, he has been the Frederick P. Rose Director of the Hayden Planetarium at the Rose Center for Earth and Space in New York City. ",
     date: new Date(Date.now())
   }
 ];

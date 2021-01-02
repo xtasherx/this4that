@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // Import Components
 import NavBar from '../components/nav-bar';
@@ -7,9 +7,16 @@ import SmUser from '../components/small-user';
 
 //Bootstrap
 import Container from 'react-bootstrap/Container';
+import API from '../utils/API';
 
 
 export default function Browse () {
+        const [users, setUsers] = useState({})
+        API.getUsers()
+        .then(res => {
+                setUsers(res.data);
+                console.log(users);
+        })
         return (
                 <>
                 <NavBar />
@@ -18,7 +25,7 @@ export default function Browse () {
                         <div className ="searchBar my-3" >
                                 <Search />
                         </div>
-                        <SmUser />
+                        <SmUser city={users[0].city}/>
                 </Container>
                 </div>
                 </>
