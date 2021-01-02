@@ -1,69 +1,51 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class InputSkill extends Component {
+const SkillsInput = props => {
+	const [skill, setSkill] = React.useState(props.skill);
+	const removeSkill = indexToRemove => {
+		setSkill([...skill.filter((_, index) => index !== indexToRemove)]);
+	};
+	const addSkill = event => {
+		if (event.target.value !== "") {
+			setSkill([...skill, event.target.value]);
+			props.selectedSkill([...skill, event.target.value]);
+            event.target.value = "";
+            event.preventDefault();
+		}
+	};
+	return (
+		<div className="skill-input">
+			<ul id="skill">
+				{skill.map((skills, index) => (
+                    
+					<li key={index} className="skill">
+						<span className='skill-title'>{skills}</span>
+						<span className='skill-close-icon'
+							onClick={() => removeSkill(index)}
+						>
+							x
+						</span>
+					</li>
+				))}
+			</ul>
+			<input
+				type="text"
+				onKeyDown={event => event.key === "Enter" ? addSkill(event) : null}
+				placeholder="Enter Skill and Press Enter"
+			/>
+		</div>
+	);
+};
 
-    constructor(props) {
-        super(props)
-    
-        this.state = {
-            skills: ["React", "Node js"]
-        }
-        this.inputRef = React.createRef()
-    }
+const InputSkill = () => {
+	const selectedSkill = skill => {
+		console.log(skill);
+	};
+	return (
+		<div className="skill">
+			<SkillsInput selectedSkill={selectedSkill}  skill={['Lawn Care', 'Wood Working']}/>
+		</div>
+	);
+};
 
-    // remove skill
-    removeSkill = i => {
-        const skills = this.state.skills
-        skills.splice(i, 1)
-        this.setState({
-            skills: skills
-        })
-    }
-
-    // add skill
-    addSkill = e => {
-        const skills = this.state.skills
-        const value = e.target.value
-        if(e.key === "Enter" && value){
-            // check if duplicate skill
-            if(skills.find(skill => skill.toLowerCase() === value.toLowerCase())){
-                return alert("No duplicate value allowed")
-            }
-            // else add skill to skills array
-            skills.push(value)
-            // set new state
-            this.setState({
-                skills
-            })
-            // when submit skill, set current input filed null
-            this.inputRef.current.value = null
-        } else if(e.key === "Backspace" && !value){
-            // if no value and hit backspace we will remove previous skill
-            this.removeSkill(skills.length - 1)
-        }
-    }
-    
-
-    render() {
-        const {skills} = this.state
-        return (
-            <>
-                <h2> Add Your Skill </h2>
-                <div className="skill">
-                    <ul className="skill-list">
-                        { skills.map((skill, i) => {
-                            return (
-                                <li key={i}> {skill} <button onClick={() => this.removeSkill(i)}>+</button> </li>
-                            )
-                        }) }
-                        <li className="input-skill">
-                            <input onKeyDown={this.addSkill} type="text" size="4" ref={this.inputRef} />
-                        </li>
-                    </ul>
-                </div>
-            </>
-        )
-    }
-}
-
-export default InputSkill
+export default InputSkill;
