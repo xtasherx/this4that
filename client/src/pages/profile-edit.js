@@ -37,8 +37,7 @@ export default function ProfileEdit () {
         const [toProfile,setToProfile] = useState(false);
 
         //user info typed into form to pass to db
-        const [formObject, setFormObject] = useState({})
-        console.log(useAuth0());
+        const [formObject, setFormObject] = useState({});
         const profileRedirect = () => {
                 setToProfile(true);       
         }

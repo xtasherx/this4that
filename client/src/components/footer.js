@@ -5,7 +5,9 @@ import Row from 'react-bootstrap/Row';
 // icons
 import { FaComments, FaDollarSign, FaPenSquare } from "react-icons/fa";
 
+
 export default function Footer () {
+
     return(
         <footer className="container-fluid text-center main-footer">
             <Row className="d-inline-flex">
@@ -21,7 +23,7 @@ export default function Footer () {
                 <p>pay</p>
                 </a>  
                 
-                <a href="https://google.com/">
+                <a href="https://google.com/" >
                 <span> < FaPenSquare size={25} /> </span>
                 <p>reviews</p>
                 </a>     
