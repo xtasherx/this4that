@@ -15,6 +15,7 @@ import NavBar from '../components/nav-bar';
 import InputSkill from '../components/input-skills'
 
 
+
 export default function ProfileEdit () {
 
         // pulls in user info returned from Auth0 to pass to db 
@@ -60,20 +61,20 @@ export default function ProfileEdit () {
                         <Container className="pt-5">
                                 <Form className="edit-form mx-auto">
                                 <img src= { picture } alt={name} className="rounded-circle img-fluid mb-2" />
-                                <h2>{ name }</h2>
+                                <h2>{ given_name } { family_name }</h2>
                                 <h6 className="mb-5">{email}</h6>
-          
+
                                 <Form.Row>
                                         <Form.Group as={Col} md="6" controlId="formPhoto">
-                                            <div className="mb-3">
-                                            <Form.File id="formcheck-api-regular">
-                                            <Form.Label>Profile Picture</Form.Label>
-                                            <Form.File.Input />
-                                            </Form.File>
-                                            </div>
+                                                <div className="mb-3">
+                                                <Form.File id="formcheck-api-regular">
+                                                <Form.Label>Profile Picture</Form.Label>
+                                                <Form.File.Input />
+                                                </Form.File>
+                                                </div>
                                         </Form.Group> 
                                 </Form.Row>
-    
+
                                 <Form.Row>
                                         <Form.Group as={Col} md="6" controlId="formPayPal">
                                         <Form.Label>PayPal UserName</Form.Label>
@@ -152,15 +153,13 @@ export default function ProfileEdit () {
                                         <Form.Label>Travel Distance</Form.Label>
                                         <Form.Control type="text" placeholder="Distance" name="traveldist" onChange={handleInputChange} />
                                         </Form.Group>
-                                    </Form.Row>
-          
+                                </Form.Row>
 
                                         <Form.Group controlId="exampleForm.ControlTextarea1">
                                         <Form.Label>Bio</Form.Label>
                                         <Form.Control as="textarea" rows={3} placeholder="Tell us a little about you..."/>
                                         </Form.Group>
-          
-          
+
                                         <Form.Label>Barter Skills</Form.Label>
                                         <InputSkill />
                                 <Button 
