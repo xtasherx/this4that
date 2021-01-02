@@ -31,14 +31,14 @@ const MainNav = () => (
     >
       Profile
     </NavLink>
-    <NavLink
+    {/* <NavLink
       to="/external-api"
       exact
       className="navLink"
       activeClassName="router-link-exact-active"
     >
       External API
-    </NavLink>
+    </NavLink> */}
   </div>
 );
 

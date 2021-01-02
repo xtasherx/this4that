@@ -20,7 +20,7 @@ export default function ProfileCard () {
             <img src= { picture } alt={name} className="profCircle" />
             <Card.Body>
                 <Card.Title>{ name }</Card.Title>
-                <Card.Text><p>City, State</p></Card.Text>
+                <Card.Text><p>city, State</p></Card.Text>
                 <StarRating />
                     <Card.Text className="mt-4">
                         <h5>Bio</h5>

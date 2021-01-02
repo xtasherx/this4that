@@ -1,7 +1,8 @@
+
 /* Navigation */
-.navBar{
+.navBar {
   background-color: #063044;
-  padding: .75em 5% !important;
+  padding: 0.75em 5% !important;
 }
 
 .navBar h1 {
@@ -11,19 +12,19 @@
 .navLink {
   color: #fff !important;
   text-decoration: none;
-  padding: .5em 10px;
+  padding: 0.5em 10px;
 }
 
-.navLink:hover{
+.navLink:hover {
   color: #ffc870 !important;
   text-decoration: none;
 }
 
- /* Authentication buttons */
-.authenLogin{
+/* Authentication buttons */
+.authenLogin {
   background-color: #246476 !important;
-  color:#fff !important;
-  font-weight: 600!important;
+  color: #fff !important;
+  font-weight: 600 !important;
 }
 
 .authenLogout{
@@ -32,9 +33,9 @@
   font-weight: 600 !important;
 }
 
-.authenSignup{
+.authenSignup {
   background-color: #246476 !important;
-  color:#fff !important;
+  color: #fff !important;
   font-weight: 600 !important;
 }
 
@@ -44,27 +45,26 @@
   padding: 5px 10px;
 }
 
-
 /* Home Elements */
-.jumbotron{
-  background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/cork-board.png');
+.jumbotron {
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/cork-board.png");
   text-align: center;
   padding: 10em 0 !important;
 }
 
 /* Profile Page */
-.userInfo{
+.userInfo {
   padding: 4em 0 0;
-  background-color:#063044;
+  background-color: #063044;
 }
 
-.profileCard{
+.profileCard {
   border-radius: 5px;
   padding: 2em 30px;
   background-color: #fff;
 }
 
-.profile{
+.profile {
   padding: 1em;
 }
 
@@ -73,19 +73,20 @@
   border-radius: 50%;
 }
 
-.edit, .edit:hover{
+.edit,
+.edit:hover {
   color: #8baec0;
   text-decoration: none;
 }
 
 /* Profile Edit */
-.proEdit{
+.proEdit {
   background-color: #063044;
   height: 100%;
   min-height: 100vh;
 }
 
-.edit-form{
+.edit-form {
   width: 80%;
 }
 
@@ -105,6 +106,14 @@
   background-color: #E9BF49;
   color:#333333;
   font-weight: 600;
+}
+
+/* Review User */
+.submitReview {
+  background-color: #063044;
+  color: #fff;
+  height: 100%;
+  min-height: 100vh;
 }
 
 
@@ -178,70 +187,71 @@
 
 
 /* Review Slider */
-.revSlide{
+.revSlide {
   margin: 0 auto;
-  clear:both;
-} 
+  clear: both;
+}
 
-.carousel-slider, .slider-wrapper, .slide{
+.carousel-slider,
+.slider-wrapper,
+.slide {
   background-color: #fff !important;
-  padding: .25em 0 .5em;
+  padding: 0.25em 0 0.5em;
   border-radius: 5px;
 }
-.carousel.carousel-slider .control-arrow:active, 
-.carousel.carousel-slider .control-arrow:hover{
-  background-color:transparent !important;
+.carousel.carousel-slider .control-arrow:active,
+.carousel.carousel-slider .control-arrow:hover {
+  background-color: transparent !important;
 }
 
 /* left arrow */
-.carousel .control-prev.control-arrow:before{
-  border-right: 8px solid #E9BF49!important;
+.carousel .control-prev.control-arrow:before {
+  border-right: 8px solid #e9bf49 !important;
 }
 /* right arrow */
-.carousel .control-next.control-arrow:before{
-  border-left: 8px solid #E9BF49!important;
+.carousel .control-next.control-arrow:before {
+  border-left: 8px solid #e9bf49 !important;
 }
 
 .setStar {
   color: #ffc107;
 }
 
-.profRev{
-  background-color:#063044;
-  padding:1em;
+.profRev {
+  background-color: #063044;
+  padding: 1em;
 }
 
-.profRev h4{
-  color:#fff;
+.profRev h4 {
+  color: #fff;
 }
 
 /* Review Card */
 .circle{
   width: 100px !important;
   border-radius: 50%;
-  background-color:bisque;
+  background-color: bisque;
 }
 
-.reviewCard{
+.reviewCard {
   text-align: center;
-  background-color:none;
+  background-color: none;
   padding: 1em 0;
-  width:auto;
+  width: auto;
 }
 
-.reviewCard button{
-  height:100%;
-  bottom:0;
+.reviewCard button {
+  height: 100%;
+  bottom: 0;
 }
 
-.reviewText{
+.reviewText {
   width: 60%;
 }
 
-
 /* rating */
-input[type="radio"]{
-  display:none;
+input[type="radio"] {
+  display: none;
 }
 
 .star {
@@ -249,21 +259,25 @@ input[type="radio"]{
   transition: color 200ms;
 }
 
-
 /* Browse Profiles */
+
 .searchBar input{
   width: 50%;
   border-radius: 5px;
   margin: 0 auto !important;
   display: flex;
   border: 1px solid #8baec0;
-  padding: .25em 1em;
+  padding: 0.25em 1em;
 }
 
-.smCard, .card .btn .btn-primary,
-.smCard, .card .btn .btn-primary:hover,
-.smCard, .card .btn .btn-primary:active,
-.smCard, .card .btn .btn-primary:focus {
+.smCard,
+.card .btn .btn-primary,
+.smCard,
+.card .btn .btn-primary:hover,
+.smCard,
+.card .btn .btn-primary:active,
+.smCard,
+.card .btn .btn-primary:focus {
   border: 0px none !important;
   background-color: transparent !important;
   border-radius: 2px;
@@ -273,26 +287,25 @@ input[type="radio"]{
   display: flex;
 }
 
-.smContent{
+.smContent {
   padding: 1em !important;
-  color:#063044;
+  color: #063044;
 }
-
 
 /* Footer */
 footer {
   background-color: #fff;
   width: 100%;
-  padding: .5em 0;
+  padding: 0.5em 0;
   bottom: 0;
   position: relative;
 }
 
-footer a, footer a:hover{
-  color: #E9BF49;
+footer a,
+footer a:hover {
+  color: #e9bf49;
   text-decoration: none;
 }
-
 
 
 /* 
@@ -300,17 +313,15 @@ footer a, footer a:hover{
 // No media query for `xs` since this is the default in Bootstrap */
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-  
+@media (min-width: 576px) {
 }
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-  
+@media (min-width: 768px) {
 }
 
 /* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
@@ -319,5 +330,4 @@ footer a, footer a:hover{
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-  
 }
