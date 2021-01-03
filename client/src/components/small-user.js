@@ -1,10 +1,8 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 // Boostrap
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
-
-import Skills from '../components/skills'
 
 // icons
 import { FaStar } from "react-icons/fa";
@@ -12,24 +10,25 @@ import { FaStar } from "react-icons/fa";
 // Authentication
 import { useAuth0 } from "@auth0/auth0-react";
 
-// employee info
-import portfolio from "../portfolio.json";
 
-export default function SmUser () {
+export default function SmUser (props) {
     const { user } = useAuth0();
     const { name, picture } = user; 
-    
+    const users = props.users;
+    console.log(users);
+
+
     return(
 <>
-        {portfolio.map(e => (
+          { users.map(user => (
             <Button className="smCard">
             <Card className="smContent" >
                 <div className="img-container justify-content-center" >
                     <img src={ picture } className="circle" alt={name} />
                 </div>
                 <div>
-                    <h4 className="mt-2">{ name }</h4>
-                    <p>City, State</p>
+                    <h4 className="mt-2"> {user.firstname} {user.lastname}</h4>
+                    <p>{props.city}, {props.state}</p>
                     <div className="setStar">
                     {[...Array(5)].map((star) => {
                         return ( 
@@ -38,12 +37,16 @@ export default function SmUser () {
                     })}
                     </div>
 
-                    <Skills />
+                    <Card className="border-0">
+                        <Card.Body className="skillSet card-deck mt-3">
+                            <span>Skill</span>
+                        </Card.Body>
+                    </Card>
+
                 </div>
             </Card> 
         </Button>
-
-        ))}
+          ))}
 
         </>
     );
