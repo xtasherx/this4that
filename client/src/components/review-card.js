@@ -3,13 +3,10 @@ import React from "react";
 // icons
 import { FaStar } from "react-icons/fa";
 
-//authentication
-import { useAuth0 } from "@auth0/auth0-react";
 
 
 export default function ReviewCard() {
-    // const { user, isAuthenticated } = useAuth0();
-    // const { name, picture } = user; 
+
         return (
             // isAuthenticated && (
                 <div className="reviewCard ">

@@ -12,19 +12,32 @@ import API from "../utils/API";
 
 // Components
 import NavBar from '../components/nav-bar';
-import InputSkill from '../components/input-skills'
+
 
 
 export default function ProfileEdit () {
+        //state for the skills section 
+        const [skill, setSkill] = useState([]);
+	const removeSkill = indexToRemove => {
+		setSkill([...skill.filter((_, index) => index !== indexToRemove)]);
+        };
+	const addSkill = event => {
+		if (event.target.value !== "") {
+			setSkill([...skill, event.target.value]);
+            event.target.value = "";
+            event.preventDefault();
+		}
+        };
+        
+
 
         // pulls in user info returned from Auth0 to pass to db 
         const { user } = useAuth0();
-        const { given_name, family_name, email, picture, name, sub} = user;
+        const { email, picture, name, sub} = user;
         const [toProfile,setToProfile] = useState(false);
 
         //user info typed into form to pass to db
-        const [formObject, setFormObject] = useState({})
-        console.log(useAuth0());
+        const [formObject, setFormObject] = useState({});
         const profileRedirect = () => {
                 setToProfile(true);       
         }
@@ -37,7 +50,9 @@ export default function ProfileEdit () {
                 state: formObject.state,
                 traveldist: formObject.traveldist,
                 paypaluser: formObject.paypaluser,
-                phone: formObject.phone
+                phone: formObject.phone,
+                bio: formObject.bio,
+                skills: skill
                 })
                 .then( profileRedirect )
                 .catch(err => console.log(err));    
@@ -157,12 +172,32 @@ export default function ProfileEdit () {
 
                                         <Form.Group controlId="exampleForm.ControlTextarea1">
                                         <Form.Label>Bio</Form.Label>
-                                        <Form.Control as="textarea" rows={3} placeholder="Tell us a little about you..."/>
+                                        <Form.Control as="textarea" rows={3} placeholder="Tell us a little about you..." name="bio" onChange={handleInputChange}/>
                                         </Form.Group>
           
           
-                                        <Form.Label>Barter Skills</Form.Label>
-                                        <InputSkill />
+                                        <Form.Label>Barter Skills</Form.Label>         
+
+                                        <div className="skill-input">
+                                                <ul id="skill">
+                                                        {skill.map((skills, index) => (
+                                                          <li key={index} className="skill">
+                                                          <span className='skill-title'>{skills}</span>
+                                                          <span className='skill-close-icon'
+                                                                onClick={() => removeSkill(index)}
+                                                          >
+                                                                x
+                                                          </span>
+                                                          </li>
+                                                ))}
+                                                </ul>
+                                                <input
+                                                        type="text"
+                                                        onKeyDown={event => event.key === "Enter" ? addSkill(event) : null}
+                                                        placeholder="Enter Skill and Press Enter"
+                                                />
+		                        </div>
+
                                 <Button 
                                 variant="primary" 
                                 type="submit" 

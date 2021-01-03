@@ -6,11 +6,11 @@ import { Redirect} from 'react-router';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
 
 //components
 import NavBar from "../components/nav-bar";
 import ProfileCard from '../components/profile-card'
-import Skills from '../components/skills'
 import ReviewSlider from '../components/review-slider';
 import Footer from '../components/footer'
 
@@ -28,15 +28,17 @@ export default function Profile () {
         const { email, sub, given_name, family_name} = user;
         const [toProfileEdit,setToProfileEdit] = useState(false);
         const profileEditRedirect = () => {
-                console.log("User added to database.")
+                console.log("User added to database.");
                 setToProfileEdit(true);       
         }
+        const [userData, setUserData] = useState({});
+        const [skillList, setSkillList] = useState([]);
         // After component loads this runs to check if the user is in the db if so returns their 
         // info for us to use if not creates a user in db and routes to profile-edit.js
+        // The array at the end will throw an error but stops an infinite loop and shouldn't be removed. 
         useEffect(() => {
                 API.getUser(sub)
-                .then( res => {
-                        
+                .then( res => {     
                         if(!res.data){                            
                                 API.saveUser({
                                         _id: sub,
@@ -46,12 +48,14 @@ export default function Profile () {
                                         })
                                 .then(profileEditRedirect)
                                 .catch(err => console.log(err));
-                        }else{console.log(res.data)}
-
+                        }else{
+                                setUserData(res.data);   
+                                setSkillList(res.data.skills);                                                             
+                        }
                         }
                 )
                 .catch(err => console.log(err))
-              });
+              },[]);
 
         return(
                 <>
@@ -74,10 +78,19 @@ export default function Profile () {
                                 </Row>
                                 <Row>
                                         <Col md="7">
-                                        <ProfileCard />
+                                        <ProfileCard city={userData.city} state={userData.state} bio={userData.bio}/>
                                         </Col>
                                         <Col>
-                                        <Skills />
+                                        <Card className="border-0">
+                                     
+                                                <Card.Body className="skillSet card-deck mt-3">
+                                                {skillList.map((skill,i) => (
+                                                        <span key={i}>{skill}</span>
+                                                ))}
+
+                                                </Card.Body>
+                                        </Card>
+
                                         </Col>
                                 </Row>
                                 <Row>
