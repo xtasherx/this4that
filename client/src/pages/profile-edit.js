@@ -15,6 +15,7 @@ import NavBar from '../components/nav-bar';
 import InputSkill from '../components/input-skills'
 
 
+
 export default function ProfileEdit () {
 
         // pulls in user info returned from Auth0 to pass to db 
