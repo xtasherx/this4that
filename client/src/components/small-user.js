@@ -10,6 +10,8 @@ import { FaStar } from "react-icons/fa";
 // Authentication
 import { useAuth0 } from "@auth0/auth0-react";
 
+// employee info
+// import users from "../users.json";
 
 export default function SmUser (props) {
     const { user } = useAuth0();
@@ -20,7 +22,7 @@ export default function SmUser (props) {
 
     return(
 <>
-          { users.map(user => (
+        {users.map(e => (
             <Button className="smCard">
             <Card className="smContent" >
                 <div className="img-container justify-content-center" >
@@ -46,7 +48,7 @@ export default function SmUser (props) {
                 </div>
             </Card> 
         </Button>
-          ))}
+        ))}
 
         </>
     );

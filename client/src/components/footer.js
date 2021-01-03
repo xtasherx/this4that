@@ -26,8 +26,8 @@ export default function Footer () {
     return(
         <footer className="container-fluid text-center main-footer">
             <Row className="d-inline-flex">
-                    {/* Footer Nav Icons */}
                 
+                {/* Footer Nav Icons */}
                 <a className="mr-5" href="https://google.com/">
                 <span> < FaComments size={25} /> </span>
                 <p>message</p>
@@ -38,9 +38,9 @@ export default function Footer () {
                 <p>pay</p>
                 </a>  
                 
-                <a href="https://google.com/" >
+                <a href="./review-user">
                 <span> < FaPenSquare size={25} /> </span>
-                <p>reviews</p>
+                <p>review</p>
                 </a>     
             </Row>
         </footer>

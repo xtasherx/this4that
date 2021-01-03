@@ -61,8 +61,6 @@ export default function ProfileEdit () {
                 const { name, value } = event.target;
                 setFormObject({...formObject, [name]: value})
         };
-        
-
         return(
 
                 // path needs to be changed to /profile/:id once you figure that out 
