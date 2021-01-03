@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 // icons
 import { FaComments, FaDollarSign, FaPenSquare } from "react-icons/fa";
 
-import API from "../utils/API";
+// import API from "../utils/API";
 
 export default function Footer () {
     return(

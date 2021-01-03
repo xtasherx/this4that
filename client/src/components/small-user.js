@@ -13,7 +13,7 @@ import { FaStar } from "react-icons/fa";
 import { useAuth0 } from "@auth0/auth0-react";
 
 // employee info
-import portfolio from "../portfolio.json";
+import users from "../users.json";
 
 export default function SmUser () {
     const { user } = useAuth0();
@@ -21,7 +21,7 @@ export default function SmUser () {
     
     return(
 <>
-        {portfolio.map(e => (
+        {users.map(e => (
             <Button className="smCard">
             <Card className="smContent" >
                 <div className="img-container justify-content-center" >
