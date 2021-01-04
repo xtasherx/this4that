@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {NavLink} from "react-router-dom";
-import { Redirect} from 'react-router';
+import {useParams} from 'react-router';
 
 //Bootstrap
 import Container from 'react-bootstrap/Container';
@@ -14,54 +14,29 @@ import ProfileCard from '../components/profile-card'
 import ReviewSlider from '../components/review-slider';
 import Footer from '../components/footer'
 
-
-//Auth and Db 
-import { useAuth0 } from "@auth0/auth0-react";
+//Db 
 import API from "../utils/API";
 
 // icons
 import { FaPen } from "react-icons/fa";
 
 
-export default function Profile () {
-        const {user} = useAuth0();
-        const { email, sub, given_name, family_name} = user;
-        const [toProfileEdit,setToProfileEdit] = useState(false);
-        const profileEditRedirect = () => {
-                console.log("User added to database.");
-                setToProfileEdit(true);       
-        }
-        const [userData, setUserData] = useState({});
-        const [skillList, setSkillList] = useState([]);
-        // After component loads this runs to check if the user is in the db if so returns their 
-        // info for us to use if not creates a user in db and routes to profile-edit.js
-        // The array at the end will throw an error but stops an infinite loop and shouldn't be removed. 
-        useEffect(() => {
-                API.getUser(sub)
-                .then( res => {     
-                        if(!res.data){                            
-                                API.saveUser({
-                                        _id: sub,
-                                        firstname: given_name,
-                                        lastname: family_name,
-                                        email: email
-                                        })
-                                .then(profileEditRedirect)
-                                .catch(err => console.log(err));
-                        }else{
-                                setUserData(res.data);   
-                                setSkillList(res.data.skills);                                                             
-                        }
-                        }
-                )
-                .catch(err => console.log(err))
-              },[]);
+export default function User () {
+    const {id} = useParams();
+    const [userData, setUserData] = useState({});
+    const [skillList, setSkillList] = useState([]);
+
+    useEffect(() => {
+        API.getUser(id)
+        .then(res => {
+            setUserData(res.data);
+            setSkillList(res.data.skills);
+            console.log(userData);
+        })
+    },[])
 
         return(
                 <>
-                {/* the line below allows re-direct to profile-edit  */}
-                {toProfileEdit ? <Redirect to ="/profile-edit" /> : null}
-                
                 <NavBar />
                 <div className="userInfo">
                 <Container>
@@ -78,7 +53,7 @@ export default function Profile () {
                                 </Row>
                                 <Row>
                                         <Col md="7">
-                                        <ProfileCard city={userData.city} state={userData.state} bio={userData.bio}/>
+                                    <ProfileCard city={userData.city} state={userData.state} firstName={userData.firstname} lastName={userData.lastname} picture={userData.photourl}/>
                                         </Col>
                                         <Col>
                                         <Card className="border-0">
@@ -89,6 +64,13 @@ export default function Profile () {
                                                 ))}
 
                                                 </Card.Body>
+
+                                                <Card.Text className="mt-4">
+                                                        <h5>Bio</h5>
+                                                        <p>
+                                                        {userData.bio}
+                                                        </p>
+                                                </Card.Text>
                                         </Card>
 
                                         </Col>

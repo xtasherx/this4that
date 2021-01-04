@@ -12,6 +12,8 @@ const userSchema = new Schema({
   paypaluser: {type: String, required: false},
   phone: {type: String, required: false},
   skills: {type:Array, required: false},
+  reviews: {type:Array, required: false},
+  photourl: {type:String, required: false},
   bio: {type:String, required: false},
   date: { type: Date, default: Date.now }
 });

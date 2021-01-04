@@ -17,7 +17,7 @@ export default function Home () {
         return(
         <>
         {/* this line will re-direct the user to their profile if they're already logged in  */}
-        {isAuthenticated ? <Redirect to ="/profile" /> : null}
+        {isAuthenticated ? <Redirect to ="/redirect" /> : null}
         <div>
                 <Jumbotron fluid className="jumbotron">
                         <Container>

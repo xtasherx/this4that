@@ -6,27 +6,16 @@ import Card from 'react-bootstrap/Card'
 //Rating
 import StarRating from '../components/user-rating';
 
-// authentication
-import { useAuth0 } from "@auth0/auth0-react";
-
-
 export default function ProfileCard (props) {
-    const { user } = useAuth0();
-    const { name, picture } = user; 
-    
+   
     return(
     <>
         <Card className="profile border-0">
-            <img src= { picture } alt={name} className="profCircle" />
+            <img src= { props.picture } alt={props.firstName} className="profCircle" />
             <Card.Body>
-                <Card.Title>{ name }</Card.Title>
+                <Card.Title>{ props.firstName } {props.lastName}</Card.Title>
                 <Card.Text><p>{props.city}, {props.state}</p></Card.Text>
                 <StarRating />
-                    <Card.Text className="mt-4">
-                        <h5>Bio</h5>
-                        <p>{props.bio}
-                        </p>
-                    </Card.Text>
             </Card.Body>
         </Card>
     </>
