@@ -6,6 +6,7 @@ import API from '../utils/API';
 // icons
 import { FaComments, FaDollarSign, FaPenSquare } from "react-icons/fa";
 
+
 export default function Footer () {
     const {user} = useAuth0();
     const {sub} = user;
@@ -37,7 +38,7 @@ export default function Footer () {
                 <p>pay</p>
                 </a>  
                 
-                <a href="https://google.com/">
+                <a href="https://google.com/" >
                 <span> < FaPenSquare size={25} /> </span>
                 <p>reviews</p>
                 </a>     
