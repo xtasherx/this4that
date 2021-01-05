@@ -1,4 +1,3 @@
-
 /* Navigation */
 .navBar {
   background-color: #063044;
@@ -25,22 +24,30 @@
   background-color: #246476 !important;
   color: #fff !important;
   font-weight: 600 !important;
+  box-shadow: none !important;
 }
 
-.authenLogout{
-  background-color: #E9BF49 !important;
-  color:#333333 !important;
+.authenLogout {
+  background-color: #e9bf49 !important;
+  color: #333333 !important;
   font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
+.authenLogout:hover{ 
+  color: #fff !important;
+  background-color: #246476 !important;
 }
 
 .authenSignup {
   background-color: #246476 !important;
   color: #fff !important;
   font-weight: 600 !important;
+  box-shadow: none !important;
 }
 
-.search{
-  border:none;
+.search {
+  border: none;
   border-radius: 5px;
   padding: 5px 10px;
 }
@@ -60,23 +67,32 @@
 
 .profileCard {
   border-radius: 5px;
-  padding: 2em 30px;
+  padding: 2em 30px 0;
   background-color: #fff;
 }
 
 .profile {
-  padding: 1em;
+  padding: 1em 1em 0;
 }
 
-.profCircle{
+.profCircle {
   width: 200px;
   border-radius: 50%;
 }
 
-.edit,
-.edit:hover {
+.edit {
   color: #8baec0;
   text-decoration: none;
+}
+
+.edit:hover {
+  color: #5e90a8;
+  text-decoration: none;
+}
+
+.bio{
+  margin: 0 30px;
+  padding: 0 1em 1em;
 }
 
 /* Profile Edit */
@@ -90,21 +106,23 @@
   width: 80%;
 }
 
-.edit-form h2, .edit-form h6{
+.edit-form h2,
+.edit-form h6 {
   color: rgb(241, 241, 241);
 }
 
-.form-label, label{
+.form-label,
+label {
   color: rgb(241, 241, 241);
 }
 
-.form-control-file{
+.form-control-file {
   color: rgb(241, 241, 241);
 }
 
 .edit-form .btn {
-  background-color: #E9BF49;
-  color:#333333;
+  background-color: #e9bf49;
+  color: #333333;
   font-weight: 600;
 }
 
@@ -119,98 +137,99 @@
 
 /* Skills Input */
 .skill-input input {
-    flex: 1;
-    width:300px;
-    border: none;
-    border-radius: 5px;
-		height: 3em;
-		font-size: 14px;
-    padding: 10px;
-    margin: .5em 0 0;
-    }
-    
-.skill-input, input:focus{
+  flex: 1;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  height: 3em;
+  font-size: 14px;
+  padding: 10px;
+  margin: 0.5em 0 0;
+}
+
+.skill-input,
+input:focus {
   outline: transparent;
 }
 
 .skill-input #skill {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 0;
-	margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
 }
 
 .skill-input .skill {
-	width: auto;
-	height: 32px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #fff;
-	padding: 0 8px;
-	font-size: 14px;
-	list-style: none;
-	border-radius: 6px;
-	margin: 0 8px 0 0;
-	background: #7CAD3E;
-  }
-  
-.skill-input .skill-close-icon {
-		display: block;
-		width: 1em;
-		height: 1em;
-		line-height: 12px;
-		text-align: center;
-		font-size: 14px;
-		margin-left: 8px;
-		color: #246476;
-		border-radius: 50%;
-		background: #fff;
-		cursor: pointer;
-	}
-
-
-
-/* Skill Set */
-.skillSet{
-  padding: 1em;
+  width: auto;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0 8px;
+  font-size: 14px;
+  list-style: none;
+  border-radius: 6px;
+  margin: 0 8px 0 0;
+  background: #7cad3e;
 }
 
-.skillSet span{
-  background-color:#7CAD3E; 
+.skill-input .skill-close-icon {
+  display: block;
+  width: 1em;
+  height: 1em;
+  line-height: 12px;
+  text-align: center;
   font-size: 14px;
-  color:#fff;
-  padding: .5em 10px;
-  margin: .25em 5px;
+  margin-left: 8px;
+  color: #246476;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* Skill Set */
+.skillSet {
+  padding: 2em 0;
+}
+
+.skillSet span {
+  background-color: #7cad3e;
+  font-size: 14px;
+  color: #fff;
+  padding: 0.5em 10px;
+  margin: 0.25em 5px 1em 0;
   border-radius: 5px;
 }
 
-
 /* Review Slider */
 .revSlide {
-  margin: 0 auto;
-  clear: both;
+  margin: 0 auto 3em;
+  width: 100%;
 }
 
 .carousel-slider,
 .slider-wrapper,
 .slide {
   background-color: #fff !important;
-  padding: 0.25em 0 0.5em;
+  margin: 0.25em 0 1em !important;
   border-radius: 5px;
 }
 .carousel.carousel-slider .control-arrow:active,
 .carousel.carousel-slider .control-arrow:hover {
   background-color: transparent !important;
+  
 }
 
 /* left arrow */
 .carousel .control-prev.control-arrow:before {
   border-right: 8px solid #e9bf49 !important;
+  margin-left: 20px !important;
 }
 /* right arrow */
 .carousel .control-next.control-arrow:before {
   border-left: 8px solid #e9bf49 !important;
+  margin-right: 20px !important;
 }
 
 .setStar {
@@ -227,7 +246,7 @@
 }
 
 /* Review Card */
-.circle{
+.circle {
   width: 100px !important;
   border-radius: 50%;
   background-color: bisque;
@@ -236,7 +255,7 @@
 .reviewCard {
   text-align: center;
   background-color: none;
-  padding: 1em 0;
+  padding: 1em 0px;
   width: auto;
 }
 
@@ -260,8 +279,7 @@ input[type="radio"] {
 }
 
 /* Browse Profiles */
-
-.searchBar input{
+.searchBar input {
   width: 50%;
   border-radius: 5px;
   margin: 0 auto !important;
@@ -270,26 +288,46 @@ input[type="radio"] {
   padding: 0.25em 1em;
 }
 
-.smCard,
-.card .btn .btn-primary,
-.smCard,
-.card .btn .btn-primary:hover,
-.smCard,
-.card .btn .btn-primary:active,
-.smCard,
-.card .btn .btn-primary:focus {
-  border: 0px none !important;
-  background-color: transparent !important;
+.smCard{
+  padding: 0 10px;
+  margin: 1em 0;
+  height: 100%;
+  width: 350px;
   border-radius: 2px;
-  height: auto;
-  margin: 1em auto;
-  width: 33.3%;
-  display: flex;
+  display: inline-block !important;
+  vertical-align: top !important;
+}
+
+.card {
+  border: 0px none !important;
+}
+
+
+.img-container{
+  padding: 1em 20px 0;
+  margin: 0 auto;
 }
 
 .smContent {
-  padding: 1em !important;
+  padding: 1em 20px!important;
   color: #063044;
+  text-align: center;
+}
+
+.viewPro, .viewPro:active, .viewPro:focus{
+  width: 100%;
+  margin: 0px !important;
+  border: 0px none !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  background-color: #e9bf49 !important;
+  color: #333333 !important;
+  font-weight: 600 !important;
+}
+
+.viewPro:hover{ 
+  color: #fff !important;
+  background-color: #246476 !important;
 }
 
 /* Footer */
@@ -301,12 +339,15 @@ footer {
   position: relative;
 }
 
-footer a,
-footer a:hover {
+footer a{
   color: #e9bf49;
   text-decoration: none;
 }
 
+footer a:hover{ 
+  color: #246476;
+  text-decoration: none;
+}
 
 /* 
 // X-Small devices (portrait phones, less than 576px)
