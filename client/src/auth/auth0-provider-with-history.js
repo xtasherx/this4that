@@ -17,7 +17,7 @@ const Auth0ProviderWithHistory = ({ children }) => {
     <Auth0Provider
       domain={domain}
       clientId={clientId}
-      redirectUri={window.location.pathname="/redirect"}
+      redirectUri={"https://peaceful-ocean-96286.herokuapp.com/redirect"}
       onRedirectCallback={onRedirectCallback}
       audience={audience}
     >
