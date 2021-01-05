@@ -37,14 +37,15 @@ export default function Browse () {
                 <>
                 <NavBar />
                 <div className="proEdit">
-                <Container className="pt-4 mx-auto ">
+                <Container className="pt-4">
                         <div className ="searchBar my-3" >
                                 <Search />
                         </div>
-                        
+
+                     <div className="smCard flex-row flex-wrap">   
         {userData.map(user =>(
-                <div className="smCard">
-                        <Card>
+                
+                        <Card className="align-items-center">
                                 <div className="img-container">
                                         <img src={ user.image } className="circle" alt={user.firstname} />
                                 </div>
@@ -70,8 +71,9 @@ export default function Browse () {
                                 </div>
                                 <Button className="viewPro">View Profile</Button>
                         </Card> 
-                </div>
+                
                 ))}
+                </div>
                 
                 </Container>
                 </div>
