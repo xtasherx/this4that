@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Redirect} from 'react-router';
+import React, { useState, useEffect } from "react";
 //Bootstrap
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
@@ -15,30 +14,23 @@ import NavBar from '../components/nav-bar';
 
 
 export default function ProfileEdit () {
-        //state for the skills section 
-        const [skill, setSkill] = useState([]);
-	const removeSkill = indexToRemove => {
-		setSkill([...skill.filter((_, index) => index !== indexToRemove)]);
-        };
-	const addSkill = event => {
-		if (event.target.value !== "") {
-			setSkill([...skill, event.target.value]);
-                event.target.value = "";
-                event.preventDefault();
-		}
-        };
-        
 
         // pulls in user info returned from Auth0 to pass to db 
         const { user } = useAuth0();
-        const { email, picture, name, sub} = user;
-        const [toProfile,setToProfile] = useState(false);
-
+        const { picture, sub} = user;
+        const [userData,setUserData] = useState({});
         //user info typed into form to pass to db
         const [formObject, setFormObject] = useState({});
-        const profileRedirect = () => {
-                setToProfile(true);       
-        }
+
+        //call to db to get info for display on this page. 
+        useEffect(() => {
+                API.getUser(sub)
+                .then(res => {
+                        setUserData(res.data);
+                        console.log(userData)
+                })
+        },[])
+
         // Updates the user in the database with form data. 
         // routes back to profile.js
         function handleFormSubmit(event) {   
@@ -50,9 +42,10 @@ export default function ProfileEdit () {
                 paypaluser: formObject.paypaluser,
                 phone: formObject.phone,
                 bio: formObject.bio,
-                skills: skill
+                skills: skill,
+                photourl: picture,
                 })
-                .then( profileRedirect )
+                .then( window.location.pathname = `/profile/${sub}` )
                 .catch(err => console.log(err));    
         };
 
@@ -61,18 +54,32 @@ export default function ProfileEdit () {
                 const { name, value } = event.target;
                 setFormObject({...formObject, [name]: value})
         };
+
+        //state for the skills section 
+        const [skill, setSkill] = useState([]);
+        const removeSkill = indexToRemove => {
+                setSkill([...skill.filter((_, index) => index !== indexToRemove)]);
+        };
+        const addSkill = event => {
+                if (event.target.value !== "") {
+                        setSkill([...skill, event.target.value]);
+                event.target.value = "";
+                event.preventDefault();
+                }
+        };
+        
+
         return(
 
                 // path needs to be changed to /profile/:id once you figure that out 
                 <>
-                {toProfile ? <Redirect to ="/profile" /> : null}
                 <NavBar />
                 <div className="proEdit">
                         <Container className="pt-5">
                                 <Form className="edit-form mx-auto">
-                                <img src= { picture } alt={name} className="rounded-circle img-fluid mb-2" />
-                                <h2>{ name }</h2>
-                                <h6 className="mb-5">{email}</h6>
+                                <img src= { userData.photourl } alt={userData.name} className="rounded-circle img-fluid mb-2" />
+                                <h2>{ userData.firstname} {userData.lastname}</h2>
+                                <h6 className="mb-5">{userData.email}</h6>
 
                                 <Form.Row>
                                         <Form.Group as={Col} md="6" controlId="formPhoto">

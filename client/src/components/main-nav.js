@@ -1,12 +1,15 @@
 import {NavLink} from "react-router-dom";
 import React from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+const MainNav = () => {
+   const {user} = useAuth0();
+   const {sub} = user;
 
-const MainNav = () => (
   // update classnames for styling---please do not edit wrapping code--it will break user authentication
   // if you need to add a route for a new page copy and paste one of the navlinks below  and change the to="/your-new-path" 
   // Then go to App.js and copy and paste a ProtectedRoute and edit the new route there.
-  
-  <div className="navbar-nav">
+  return (
+    <div className="navbar-nav">
     {/* <NavLink
       to="/"
       exact
@@ -24,7 +27,7 @@ const MainNav = () => (
     Browse
     </NavLink>
     <NavLink
-      to="/profile"
+      to={`/profile/${sub}`}
       exact
       className="navLink"
       activeClassName="router-link-exact-active"
@@ -40,6 +43,8 @@ const MainNav = () => (
       External API
     </NavLink> */}
   </div>
-);
+  )
+
+};
 
 export default MainNav;

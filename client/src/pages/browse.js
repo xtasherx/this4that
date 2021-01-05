@@ -1,5 +1,4 @@
 import React, { useState, useEffect} from 'react';
-
 // Import Components
 import NavBar from '../components/nav-bar';
 import Search from '../components/nav-search';
@@ -18,8 +17,21 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Browse () {
         const { user } = useAuth0();
-        const { name, picture } = user; 
+        const { name } = user; 
         const [userData, setUserData] = useState([]);
+        let userId = "";
+
+        function handleButtonClick(e) { 
+                userId = e.target.value;
+                console.log(userId);
+                console.log(e.target.value);
+                API.getUser(e.target.value)
+                .then(res => {
+                console.log(res.data);
+                window.location.pathname = `/profile/${userId}`;          
+        })
+                .catch(err => console.log(err))
+        }
         
         useEffect(() => {
                 API.getUsers()
@@ -31,8 +43,6 @@ export default function Browse () {
         // eslint-disable-next-line react-hooks/exhaustive-deps
         },[])
 
-        console.log(userData);
-
         return (
                 <>
                 <NavBar />
@@ -42,12 +52,12 @@ export default function Browse () {
                                 <Search />
                         </div>
 
-                     <div className="smCard flex-row flex-wrap">   
+                        <div className="smCard flex-row flex-wrap">   
         {userData.map(user =>(
                 
                         <Card className="align-items-center">
                                 <div className="img-container">
-                                        <img src={ user.image } className="circle" alt={user.firstname} />
+                                        <img src={ user.photourl } className="circle" alt={name} />
                                 </div>
                                 <div className="smContent">
                                         <h4 className="mt-2"> {user.firstname} {user.lastname}</h4>
@@ -69,7 +79,7 @@ export default function Browse () {
                                                 </Card.Body>
                                         </div>
                                 </div>
-                                <Button className="viewPro">View Profile</Button>
+                                <Button className="viewPro" value={user._id} onClick = {handleButtonClick}>Barter</Button>
                         </Card> 
                 
                 ))}
