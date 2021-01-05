@@ -10,6 +10,7 @@ mongoose.connect(
 
 const userSeed = [
   {
+    _id: "564525252",
     firstname: "Neil",
     lastname: "deGrasse Tyson",
     email: "ntyson@haydenplanetarium.edu",
@@ -19,9 +20,13 @@ const userSeed = [
     phone: "1-212-769-5100",
     paypaluser:"neiltyson",
     skills: ["lawn care","landscaping", "tree trimming"],
+    reviews: [],
+    photourl: "https://randomuser.me/api/portraits/men/6.jpg",
+    bio: "Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
     date: new Date(Date.now())
   },
   {
+    _id: "354198163",
     firstname: "Peggy",
     lastname: "Hill",
     email: "mrspeggyhill@teachersofarlen.com",
@@ -31,9 +36,13 @@ const userSeed = [
     phone: "1-469-202-5775",
     paypaluser:"peggyhill",
     skills: ["tutoring","spanish tutoring"],
+    reviews: [],
+    photourl: "https://randomuser.me/api/portraits/women/45.jpg",
+    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
     date: new Date(Date.now())
   },
   {
+    _id: "asdrf54964186541",
     firstname: "Walter",
     lastname: "White",
     email: "heisenberg@bluesky.com",
@@ -43,9 +52,13 @@ const userSeed = [
     phone: "1-505-866-8650",
     paypaluser:"walterwhite",
     skills: ["financial planning","tax preparation", "accounting"],
+    reviews: [],
+    photourl: "https://randomuser.me/api/portraits/women/40.jpg",
+    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
     date: new Date(Date.now())
   },
   {
+    _id: "5a5sd4fa5fde889l",
     firstname: "Liz",
     lastname: "Lemon",
     email: "lizlemon@cbs.com",
@@ -55,9 +68,13 @@ const userSeed = [
     phone: "1-212-424-6677",
     paypaluser:"lizlemon",
     skills: ["reiki","energy healing", "reflexology"],
+    reviews: [],
+    photourl: "https://randomuser.me/api/portraits/women/10.jpg",
+    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
     date: new Date(Date.now())
   },
   {
+    _id: "4588klfjasd5s5fasd",
     firstname: "Jon",
     lastname: "Snow",
     email: "jsnow@nightswatch.com",
@@ -67,9 +84,13 @@ const userSeed = [
     phone: "1-210-667-8907",
     paypaluser:"snowj",
     skills: ["blacksmithing","ferrier", "welding"],
+    reviews: [],
+    photourl: "https://randomuser.me/api/portraits/men/45.jpg",
+    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
     date: new Date(Date.now())
   },
   {
+    _id: "235asd65df456",
     firstname: "Lucille",
     lastname: "Bluth",
     email: "lucille@bluthco.com",
@@ -79,9 +100,13 @@ const userSeed = [
     phone: "1-303-456-8976",
     paypaluser:"lucillebluth",
     skills: ["mixology", "bartending", "sommelier"],
+    reviews: [],
+    photourl: "https://randomuser.me/api/portraits/women/15.jpg",
+    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
     date: new Date(Date.now())
   },
   {
+    _id: "6rg45eth456",
     firstname: "Tony",
     lastname: "Soprano",
     email: "tsoprano@notamobster.com",
@@ -91,9 +116,13 @@ const userSeed = [
     phone: "1-210-388-9076",
     paypaluser:"tonysoprano",
     skills: ["plumbing","handyman", "small home repair"],
+    reviews: [],
+    photourl: "https://randomuser.me/api/portraits/men/21.jpg",
+    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
     date: new Date(Date.now())
   },
   {
+    _id: "thn415869dfgb416ajm",
     firstname: "Jeremy",
     lastname: "Henry",
     email: "jhenry@itsjustjavascript.com",
@@ -103,9 +132,13 @@ const userSeed = [
     phone: "1-210-908-7865",
     paypaluser:"jeremyhenry",
     skills: ["magic","javascript", "wiring up", "drilling down"],
+    reviews: [],
+    photourl: "https://randomuser.me/api/portraits/lego/2.jpg",
+    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
     date: new Date(Date.now())
   },
   {
+    _id: "gvuil482vq48asdf456",
     firstname: "Lisa",
     lastname: "Turtle",
     email: "lturtle@savedbythebell.com",
@@ -115,9 +148,13 @@ const userSeed = [
     phone: "1-210-772-1192",
     paypaluser:"lisasitter",
     skills: ["babysitting","childcare"],
+    reviews: [],
+    photourl: "https://randomuser.me/api/portraits/women/4.jpg",
+    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
     date: new Date(Date.now())
   },
   {
+    _id: "lojka456486g",
     firstname: "Homer",
     lastname: "Simpson",
     email: "homersimpson@donuts.com",
@@ -127,6 +164,9 @@ const userSeed = [
     phone: "1-210-987-3489",
     paypaluser:"homers",
     skills: ["moving assistance","house painting","drywall"],
+    reviews: [],
+    photourl: "https://randomuser.me/api/portraits/men/5.jpg",
+    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
     date: new Date(Date.now())
   }
 ];

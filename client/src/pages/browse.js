@@ -1,5 +1,4 @@
 import React, { useState, useEffect} from 'react';
-
 // Import Components
 import NavBar from '../components/nav-bar';
 import Search from '../components/nav-search';
@@ -18,9 +17,21 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 export default function Browse () {
         const { user } = useAuth0();
-        const { name, picture } = user; 
+        const { name } = user; 
         const [userData, setUserData] = useState([]);
-       
+        let userId = "";
+ 
+        function handleButtonClick(e) { 
+             userId = e.target.value;
+             console.log(userId);
+             console.log(e.target.value);
+             API.getUser(e.target.value)
+             .then(res => {
+                console.log(res.data);
+                window.location.pathname = `/profile/${userId}`;          
+             })
+             .catch(err => console.log(err))
+        }
         
         useEffect(() => {
                 API.getUsers()
@@ -31,8 +42,6 @@ export default function Browse () {
                 .catch(err => console.log(err))
         },[])
 
-        console.log(userData);
-   
         return (
                 <>
                 <NavBar />
@@ -43,10 +52,11 @@ export default function Browse () {
                         </div>
                         
                 {userData.map(user =>(
+
                         <Button className="smCard">
                         <Card className="smContent" >
                                 <div className="img-container justify-content-center" >
-                                <img src={ picture } className="circle" alt={name} />
+                                <img src={ user.photourl } className="circle" alt={name} />
                                 </div>
                                 <div>
                                 <h4 className="mt-2"> {user.firstname} {user.lastname}</h4>
@@ -65,11 +75,12 @@ export default function Browse () {
                                                 <span>{skill}</span> 
                                         ))}  
                                         </Card.Body>
+                                        <Button value={user._id} onClick = {handleButtonClick}>Barter</Button>
                                 </Card>
 
                                 </div>
                         </Card> 
-                </Button>
+                </Button >
                 ))}
                 
                 </Container>

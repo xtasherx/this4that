@@ -20,7 +20,11 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/barteringapp", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/barteringapp",
+ { 
+   useNewUrlParser: true, 
+   useUnifiedTopology: true,
+  });
 
 //Open Socket connection via Server
 io.on("connection", socket => {
