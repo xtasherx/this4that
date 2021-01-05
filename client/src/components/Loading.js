@@ -1,10 +1,14 @@
 import React from "react";
-
+import Spinner from 'react-bootstrap/Spinner';
 
 const Loading = () => (
-  <div className="">
-    {/* we can place a loading animation here and auth0 will automatically render it when necessary  */}
-  </div>
+  <>
+    <div style={{"margin": "auto"}}>
+      <h6 style={{"textAlign":"Center"}} ><Spinner animation="border" /></h6>
+    </div>
+
+    
+  </>
 );
 
 export default Loading;
