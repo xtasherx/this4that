@@ -11,7 +11,7 @@ class ReviewSlide extends Component {
     render() {
         return (
         <div className="revSlide">
-            <Carousel autoplay={ false } infiniteLoop={true} showArrows={true} showStatus={false}>
+            <Carousel autoplay={ false } infiniteLoop={false} showArrows={true} showStatus={false} showThumbs={false}>
                 <ReviewCard />
                 <ReviewCard />
                 <ReviewCard />
