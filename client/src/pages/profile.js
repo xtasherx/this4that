@@ -76,7 +76,7 @@ export default function User () {
                                         </Col>
                                 </Row>
                                 <Row>
-                                        <Footer />    
+                                        <Footer paypaluser={userData.paypaluser}/>    
                                 </Row>
                         </div>
 
