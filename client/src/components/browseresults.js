@@ -56,7 +56,7 @@ function BrowseResults (props) {
 
                                 </div>
                         </Card> 
-                </Button >
+                        </Button>
                         ) : null
                 ))}
                 

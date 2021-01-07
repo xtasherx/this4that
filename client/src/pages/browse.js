@@ -12,35 +12,34 @@ import BrowseResults from '../components/browseresults';
 
 export default function Browse () {
         const [userData, setUserData] = useState([]);
-        const [searchTerm, setSearchTerm] = useState("");
         const [data,setData] = useState([]);
+        const [searchTerm, setSearchTerm] = useState("");
 
+        // gets a list of all users from the db 
         useEffect(() => {
                 API.getUsers()
                 .then(res => {
-                  setUserData(res.data); 
-                             
+                   setUserData(res.data);     
+                   setData(res.data);    
                 })
                 .catch(err => console.log(err))
+                
         },[])
 
+
         useEffect(() => {
-                userData.forEach(user => {
-                        if (user.skills.includes(searchTerm)) {
-                                console.log(user);
-                                setData([user]);
-                        } 
-                })
-               
-                // const results = userData.filter(user => 
-                //    user.skills.includes(searchTerm)  );   
-                // console.log(results);
-                // setData(results);
+                if(userData !== []) {
+                        console.log(searchTerm);
+                        console.log(data);
+                        const results = userData.filter(user => 
+                                user.skills.join("").includes(searchTerm) );   
+                                console.log(results);
+                                setData(results);  
+                }
                 
-              }, [searchTerm,userData]);
+              }, [searchTerm]);
         
 
-        // looks through each user returned from db and runs a for each on their skills --- returns only results with searched criteria 
         const handleChange = e => {
                 setSearchTerm(e.target.value);
                 console.log(searchTerm);
@@ -52,12 +51,10 @@ export default function Browse () {
                 <NavBar />
                 <div className="proEdit">
                 <Container className="pt-4">
-                        <div className ="searchBar my-3" 
-                         
-                        >
-                                <Search        
-                                value={searchTerm}
-                                onChange={handleChange}/>
+                        <div className ="searchBar my-3">
+                        <Search        
+                        value={searchTerm}
+                        onChange={handleChange}/>
                         </div>
                 <BrowseResults data={data}/>
                 </Container>
