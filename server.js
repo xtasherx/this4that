@@ -1,5 +1,5 @@
 const express = require("express");
-
+const router = require('express').Router();
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -18,7 +18,11 @@ if (process.env.NODE_ENV === "production") {
 }
 // Add routes, both API and view
 app.use(routes);
+// router.route("/").get((req,res) => {
+//   res.json({test:"test"})
+// });
 
+app.use(router);
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/barteringapp",
   { 

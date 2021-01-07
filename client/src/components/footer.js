@@ -1,13 +1,11 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-// import API from '../utils/API';
 import io from 'socket.io-client'
 
 // Booststrap
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-// import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form'
 
 // icons
