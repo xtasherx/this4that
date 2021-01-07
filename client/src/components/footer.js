@@ -1,32 +1,18 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import Row from 'react-bootstrap/Row';
 import {Button, Modal, Card, Form } from 'react-bootstrap';
-import { useAuth0 } from "@auth0/auth0-react";
 import API from '../utils/API';
-import io from 'socket.io-client';
+import io from 'socket.io-client'
+
 
 // icons
 import { FaComments, FaDollarSign, FaPenSquare } from "react-icons/fa";
 
 
-export default function Footer () {
-    const {user} = useAuth0();
-    const {sub} = user;
-    const [paypaluser, setpaypaluser] = useState();
 
-    const getPaypalUser = () => {
-        API.getUser(sub)
-        .then(res =>
-            setpaypaluser(res.data.paypaluser),
-            )
-            .catch(err => console.log(err));
-        };
-        //console.log(paypaluser);
-
-    getPaypalUser();
-    
+export default function Footer (props) {
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleOpen = () => setShow(true);
 
@@ -110,7 +96,7 @@ export default function Footer () {
                     </Modal>    
 
 
-                <a className="mr-5" href={ "https://paypal.com/paypalme/"+paypaluser} target="_blank">
+                <a className="mr-5" href={ `https://paypal.com/paypalme/${props.paypaluser}`} target="_blank">
                 <span> < FaDollarSign size={25} /> </span>
                 <p>pay</p>
                 </a>  
