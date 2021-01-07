@@ -21,6 +21,12 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  find: function(req, res) {
+    db.User
+      .find({ skills: { $elemMatch: req.query }})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   create: function(req, res) {
     db.User
       .create(req.body)
