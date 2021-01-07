@@ -80,7 +80,6 @@ export default function ProfileEdit () {
                                 <img src= { userData.photourl } alt={userData.name} className="rounded-circle img-fluid mb-2" />
                                 <h2>{ userData.firstname} {userData.lastname}</h2>
                                 <h6 className="mb-5">{userData.email}</h6>
-
                                 <Form.Row>
                                         <Form.Group as={Col} md="6" controlId="formPhoto">
                                                 <div className="mb-3">

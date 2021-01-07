@@ -65,7 +65,7 @@ export default function User () {
                                                         </p>
                                                 </Card.Text>
 
-                                                <Card.Body className="skillSet card-deck mt-3">
+                                                <Card.Body className="skillSet d-flex flex-wrap">
                                                 {skillList.map((skill,i) => (
                                                         <span key={i}>{skill}</span>
                                                 ))}
@@ -76,7 +76,7 @@ export default function User () {
                                         </Col>
                                 </Row>
                                 <Row>
-                                        <Footer />    
+                                        <Footer paypaluser={userData.paypaluser}/>    
                                 </Row>
                         </div>
 

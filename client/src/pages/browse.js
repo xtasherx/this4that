@@ -52,11 +52,11 @@ export default function Browse () {
                                 <Search />
                         </div>
 
-                        <div className="smCard flex-row flex-wrap">   
-        {userData.map(user =>(
+                <div className="smCard d-flex flex-wrap justify-content-center p-0">   
+                        {userData.map(user =>(
                 
-                        <Card className="align-items-center">
-                                <div className="img-container">
+                        <Card className="align-items-center col-xs-9 col-sm-9 col-md-5 col-md-5 col-lg-3 col-xl-3 p-0">
+                                <div className="img-container pt-4 ">
                                         <img src={ user.photourl } className="circle" alt={name} />
                                 </div>
                                 <div className="smContent">
@@ -72,9 +72,9 @@ export default function Browse () {
                                         <p className="mt-3"><strong>Distance able to travel:</strong><br /> {user.traveldist} miles</p>
 
                                         <div className="border-0">
-                                                <Card.Body className="skillSet card-deck mt-3"> 
+                                                <Card.Body className="skillSet d-flex flex-wrap"> 
                                                 {user.skills.map(skill => (
-                                                        <span>{skill}</span> 
+                                                        <span className="mb-2">{skill}</span> 
                                                 ))}  
                                                 </Card.Body>
                                         </div>
