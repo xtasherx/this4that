@@ -101,6 +101,26 @@
   padding: 0 1em 1em;
 }
 
+
+/* Messing Modal */
+.closeBtn{
+  background: none!important;
+	color: inherit!important;
+	border: none!important;
+	padding: 0!important;
+	font: inherit!important;
+	cursor: pointer!important;
+  outline: inherit!important;
+  
+}
+
+
+.closeBtn span{
+  font-size: 2em;
+}
+
+
+
 /* Profile Edit */
 .proEdit {
   background-color: #063044;
@@ -349,6 +369,23 @@ footer a{
 footer a:hover{ 
   color: #246476;
   text-decoration: none;
+}
+
+footer .btn-link{
+  background: none!important;
+	color: inherit!important;
+	border: none!important;
+	padding: 0!important;
+	font: inherit!important;
+	cursor: pointer!important;
+  outline: inherit!important;
+  color: #e9bf49!important;
+  text-decoration: none!important;
+}
+
+footer .btn-link:hover{
+  color: #246476 !important;
+  text-decoration: none!important;
 }
 
 /* 

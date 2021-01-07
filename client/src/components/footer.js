@@ -1,22 +1,118 @@
-import React from 'react';
+
+import React, { useState, useEffect, useRef } from 'react';
+// import API from '../utils/API';
+import io from 'socket.io-client'
+
+// Booststrap
 import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Card from 'react-bootstrap/Card';
+import Form from 'react-bootstrap/Form'
 
 // icons
 import { FaComments, FaDollarSign, FaPenSquare } from "react-icons/fa";
 
+// Socket.io 
 export default function Footer (props) {
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleOpen = () => setShow(true);
 
+    
+    const [yourID, setYourID] = useState();
+    const [messages, setMessages] = useState([]);
+    const [message, setMessage] = useState("");
+    
+    const socketRef = useRef();
+    
+    useEffect(() => {
+        socketRef.current = io.connect('/');
+    
+        socketRef.current.on("your id", id => {
+        setYourID(id);
+        })
+    
+        socketRef.current.on("message", (message) => {
+        console.log("here");
+        receivedMessage(message);
+        })
+    }, []);
+    
+    function receivedMessage(message) {
+        setMessages(oldMsgs => [...oldMsgs, message]);
+    }
+    
+    function sendMessage(e) {
+        e.preventDefault();
+        const messageObject = {
+        body: message,
+        id: yourID,
+        };
+        setMessage("");
+        socketRef.current.emit("send message", messageObject);
+    }
+    
+    function handleChange(e) {
+        setMessage(e.target.value);
+    }
+    
     return(
         <footer className="container-fluid text-center main-footer">
             <Row className="d-inline-flex">
                 
-                {/* Footer Nav Icons */}
-                <a className="mr-5" href="https://google.com/">
+                {/* Message Feature */}
+                <Button type="button" className="btn btn-link mr-5" onClick={handleOpen} >
                 <span> < FaComments size={25} /> </span>
                 <p>message</p>
-                </a>
+                </Button>
 
-                <a className="mr-5" href={ `https://paypal.com/paypalme/${props.paypaluser}`} target="_blank">
+                {/* Messenger Modal */}
+                    <Modal show={show} onHide={handleClose} >
+                    
+                    {/* Header Content */}
+                    <Modal.Header>
+                        <h3>Chat Box</h3>
+                        <Button className="closeBtn" onClick={handleClose}>
+                            <span>&#10006;</span>
+                        </Button>
+                    </Modal.Header>
+                    
+                    <Modal.Body>  
+                        {/* <Card> */}
+                            {messages.map((message, index) => { 
+                            if (message.id === yourID) { 
+                                return (
+                                <Card>
+                                    key={index}
+                                    <Form.Group>
+                                        <Form.Text as="textarea" placeholder='Enter Message...'>
+                                            <p>{message.body}</p>
+                                        </Form.Text>
+                                    </Form.Group>
+                                </Card>
+                                )
+                            }
+                            return (
+                                <Row key={index}>
+                                    <p>{message.body}</p>
+                                </Row>
+                            )
+                            })}
+                        {/* </Card> */}
+                        <Form onSubmit={sendMessage}>
+                            <Form.Control value={message} onChange={handleChange} as="textarea" rows={3} placeholder="Say something..." />
+                            
+                        </Form>
+                    </Modal.Body>
+
+                    <Modal.Footer>
+                        <Button className="btn-primary justify-content-end">Send</Button>
+                    </Modal.Footer>
+                </Modal>    
+
+
+                <a className="mr-5" href={ `https://paypal.com/paypalme/${props.paypaluser}`} target="_blank" rel="noreferrer">
                 <span> < FaDollarSign size={25} /> </span>
                 <p>pay</p>
                 </a>  
