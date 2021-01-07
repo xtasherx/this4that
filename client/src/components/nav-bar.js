@@ -5,7 +5,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
 // Import Other Components
-import Search from './nav-search';
 import MainNav from './main-nav';
 import AuthNav from './auth-nav';
 
@@ -21,7 +20,6 @@ const NavBar = () => {
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-            <Search />
             <MainNav />
             <AuthNav />
         </Nav>
