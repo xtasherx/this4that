@@ -58,28 +58,21 @@ export default function User () {
                                         <Col>
                                         <Card className="border-0">
 
-                                                <Card.Body className="skillSet card-deck mt-3">
-                                                {skillList.map((skill,i) => (
-                                                        <span key={i}>{skill}</span>
-                                                ))}
-
-                                                </Card.Body>
-
-                                                <Card.Text className="mt-4">
+                                        <Card.Text className="mt-4">
                                                         <h5>Bio</h5>
                                                         <p>
                                                         {userData.bio}
                                                         </p>
                                                 </Card.Text>
+
+                                                <Card.Body className="skillSet card-deck mt-3">
+                                                {skillList.map((skill,i) => (
+                                                        <span key={i}>{skill}</span>
+                                                ))}
+                                                </Card.Body>
+
                                         </Card>
 
-                                                <Card className="border-0">
-                                                        <Card.Body className="skillSet card-deck">
-                                                        {skillList.map((skill,i) => (
-                                                                <span key={i}>{skill}</span>
-                                                        ))}
-                                                        </Card.Body>
-                                                </Card>
                                         </Col>
                                 </Row>
                                 <Row>

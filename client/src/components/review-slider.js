@@ -16,9 +16,9 @@ class ReviewSlide extends Component {
         <div className="revSlide">
             <Carousel autoplay={ false } infiniteLoop={true} showArrows={true} showStatus={false} showThumbs={false}>
                 
-            {reviews.map((text, index) => (
-                <div key={index} className={index}>
-                    <div className="reviewCard">
+            {reviews.map((text, id) => (
+                <div key={id} className={id}>
+                    <div className="reviewCard align-middle">
                         <p className="mx-auto mt-2 reviewText"> 
                             {text.review}
                         </p>

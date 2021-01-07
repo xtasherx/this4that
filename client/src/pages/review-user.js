@@ -3,7 +3,6 @@ import { Redirect} from 'react-router';
 
 //Bootstrap
 import Container from 'react-bootstrap/Container';
-// import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form'
 
