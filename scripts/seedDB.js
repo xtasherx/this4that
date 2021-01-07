@@ -22,7 +22,7 @@ const userSeed = [
     skills: ["lawn care","landscaping", "tree trimming"],
     reviews: [],
     photourl: "https://randomuser.me/api/portraits/men/6.jpg",
-    bio: "Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
+    bio: "My first job as a kid was pushing a lawnmower! Although my professional focuses have changed, I have always had a passion for landscaping. I have professional equipment and years of experience in yard maintenance, small tree trimming and shaping, and landscape design and maintenance. I'm available Saturday through Monday for your yard needs!",
     date: new Date(Date.now())
   },
   {
@@ -38,7 +38,7 @@ const userSeed = [
     skills: ["tutoring","spanish tutoring"],
     reviews: [],
     photourl: "https://randomuser.me/api/portraits/women/45.jpg",
-    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
+    bio:"My name is Peggy and I am one semester away from finishing my Bachelor's of Science in Linguistics. I am fluent in Spanish (native speaker) and English, and have experience with Spanish and Latin American history, literature, linguistics, and writing skills. I can meet with you online or in person to help you improve your Spanish speaking and/or writing skills.",
     date: new Date(Date.now())
   },
   {
@@ -53,8 +53,8 @@ const userSeed = [
     paypaluser:"walterwhite",
     skills: ["financial planning","tax preparation", "accounting"],
     reviews: [],
-    photourl: "https://randomuser.me/api/portraits/women/40.jpg",
-    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
+    photourl: "https://randomuser.me/api/portraits/men/13.jpg",
+    bio:"Walter here. I was professionally employed for 35 years as an accountant and tax preparation specialist. I miss being able to help people with the financial planning and personal accounting questions, and I'm bored as retiree! I can offer everything from simple household budgeting advice and tax preparation to investment strategies and helping you understand your financial portfolio. Available for online meetings through Skype or Zoom.",
     date: new Date(Date.now())
   },
   {
@@ -70,7 +70,7 @@ const userSeed = [
     skills: ["reiki","energy healing", "reflexology"],
     reviews: [],
     photourl: "https://randomuser.me/api/portraits/women/10.jpg",
-    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
+    bio:"I am professionally employed as a school counselor, and have been an energy healer and reiki practitioner for over 10 years. I was recently certified in reflexology by the ARCB and am looking to get more practice under my belt. Reflexology is the application of appropriate pressure to specific points and areas on the feet, hands, or ears.These reflex points correspond to different body organs and systems, and pressing them creates real benefits for your health. I can also provide reiki and other energy healing services in tandem with reflexology. Sessions must be in person, but reiki alone may be done virtually as well.",
     date: new Date(Date.now())
   },
   {
@@ -83,10 +83,10 @@ const userSeed = [
     traveldist: "50 miles",
     phone: "1-210-667-8907",
     paypaluser:"snowj",
-    skills: ["blacksmithing","ferrier", "welding"],
+    skills: ["blacksmithing","farrier", "welding"],
     reviews: [],
     photourl: "https://randomuser.me/api/portraits/men/45.jpg",
-    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
+    bio:"My name's Jon. I was the Forged in Fire Season 5, Episode 12 champion. That's right. I won $10,000 with my amazing blade skills. I'll teach you, but I have to charge. Or trade. That's what this website is, right? Actually, I won't teach you, but I will make things for you. Forging, welding, farrier and blacksmithing services available for trade or pay in New Braunfels and surrounding areas.",
     date: new Date(Date.now())
   },
   {
@@ -102,7 +102,7 @@ const userSeed = [
     skills: ["mixology", "bartending", "sommelier"],
     reviews: [],
     photourl: "https://randomuser.me/api/portraits/women/15.jpg",
-    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
+    bio:"I'm a chemist with a passion for spirits! Booze, that is. I may spend my days mixing things in a lab, and I treat a wet bar no differently. I can teach you about basic mixology, crafting your own cocktails, wine pairings and more. I am a Level Two Sommelier and a moonshine connoisseur. Available to meet online or in person.",
     date: new Date(Date.now())
   },
   {
@@ -118,7 +118,7 @@ const userSeed = [
     skills: ["plumbing","handyman", "small home repair"],
     reviews: [],
     photourl: "https://randomuser.me/api/portraits/men/21.jpg",
-    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
+    bio:"I'm from New Jersey, but my family and I moved here to get away. From the city and the busy life. I've worked in sanitation most of my life and now I'm doin handyman type stuff. You know, plumbing and repairs and whatnot. I'm not a weirdo. It's ok to have me in your home. My buddies will vouch for me.",
     date: new Date(Date.now())
   },
   {
@@ -131,10 +131,10 @@ const userSeed = [
     traveldist: "25 miles",
     phone: "1-210-908-7865",
     paypaluser:"jeremyhenry",
-    skills: ["magic","javascript", "wiring up", "drilling down"],
+    skills: ["magic","javascript", "wiring it up", "drilling down"],
     reviews: [],
     photourl: "https://randomuser.me/api/portraits/lego/2.jpg",
-    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
+    bio:"Hi I'm Jeremy. I'm a Principal Software Developer and an Adjunct Instructor for UTSA's Full Stack Coding Bootcamp. You'd think that would keep me busy enough, but that's just JavaScript. My real passion is magic. I'm available remotely and in person to teach you parlor tricks, card tricks, levitation, escapology, and a kid's party favorite: React. Remember, if you want opportunity to knock, you had better build a door - and learn to make it vanish. Abracadabra!",
     date: new Date(Date.now())
   },
   {
@@ -150,7 +150,7 @@ const userSeed = [
     skills: ["babysitting","childcare"],
     reviews: [],
     photourl: "https://randomuser.me/api/portraits/women/4.jpg",
-    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
+    bio:"I'm Lisa and I'm a senior at Jefferson High School. After graduation, I plan to study early childhood development at UT Austin. I have been babysitting since I was 14 and am CPR certified. I am available in the evenings during the week, and all day on the weekends. References available upon request.",
     date: new Date(Date.now())
   },
   {
@@ -166,7 +166,55 @@ const userSeed = [
     skills: ["moving assistance","house painting","drywall"],
     reviews: [],
     photourl: "https://randomuser.me/api/portraits/men/5.jpg",
-    bio:"Your shields were failing, sir. Not if I weaken first. I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet. Then maybe you should consider this: if anything happens to them, Starfleet is going to want a full investigation",
+    bio:"I've been a contractor for 15 years, but love helping people out when I can. I've got a big truck, some buddies, and some ladders. I can help you move, paint, and do drywall - you just provide the supplies. Available most weekends.",
+    date: new Date(Date.now())
+  },
+  {
+    _id: "87dnhtq537kde",
+    firstname: "Marky",
+    lastname: "Mark",
+    email: "mm@thefunkybunch.com",
+    city: "San Antonio",
+    state: "Texas",
+    traveldist: "20 miles",
+    phone: "1-210-867-5309",
+    paypaluser:"markymarky",
+    skills: ["lawn care","fence mending","landscaping"],
+    reviews: [],
+    photourl: "https://randomuser.me/api/portraits/men/72.jpg",
+    bio:"My name is Mark, but you can call me Marky. I spend most of my time with the Funky Bunch, but in my spare time, I love working outdoors. Lawn maintenance and lanscaping are my primary areas of expertise, but I also mend a mean fence. I'm available most week days, since I'm busy getting funky on the weekends.",
+    date: new Date(Date.now())
+  },
+  {
+    _id: "l092nhd72grklo27",
+    firstname: "Leslie",
+    lastname: "Knope",
+    email: "lbknope@pawneeprd.com",
+    city: "Boerne",
+    state: "Texas",
+    traveldist: "50 miles",
+    phone: "1-210-234-9987",
+    paypaluser:"leslieknope",
+    skills: ["lawn care","gardening","landscaping"],
+    reviews: [],
+    photourl: "https://randomuser.me/api/portraits/women/86.jpg",
+    bio:"Hi I'm Leslie, Deputy Director of the Parks and Recreation Deprtment. I have a passion for parks and the closest park to you is your own yard! I love helping people with lawn care and garden planning. I am a certified Master Gardener and can help you plan your edible, perennial, and pollinator gardens. Virtual and in person meetings available.",
+    date: new Date(Date.now())
+  },
+  {
+    _id: "23gf35768462nkdk",
+    firstname: "Sandy",
+    lastname: "Cheeks",
+    email: "sandy@sbsp.com",
+    city: "Helotes",
+    state: "Texas",
+    traveldist: "100 miles",
+    phone: "1-210-344-0021",
+    paypaluser:"scheeks",
+    skills: ["massage","reiki","energy healing","breath work"],
+    reviews: [],
+    photourl: "https://randomuser.me/api/portraits/women/16.jpg",
+    bio:"My name is Sandy. I've been an energy healer and massage therapist for 5 years. I specialize in reiki, breath work, and massage to heal your body, mind, and spirit. I am available to make house calls or host you in my private studio. References and credentials available upon request.",
     date: new Date(Date.now())
   }
 ];
