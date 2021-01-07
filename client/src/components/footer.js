@@ -7,7 +7,7 @@ import io from 'socket.io-client'
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import Card from 'react-bootstrap/Card';
+// import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form'
 
 // icons
@@ -51,11 +51,14 @@ export default function Footer (props) {
         };
         setMessage("");
         socketRef.current.emit("send message", messageObject);
+        
     }
     
     function handleChange(e) {
         setMessage(e.target.value);
     }
+
+
     
     return(
         <footer className="container-fluid text-center main-footer">
@@ -70,46 +73,37 @@ export default function Footer (props) {
                 {/* Messenger Modal */}
                     <Modal show={show} onHide={handleClose} >
                     
-                    {/* Header Content */}
-                    <Modal.Header>
-                        <h3>Chat Box</h3>
-                        <Button className="closeBtn" onClick={handleClose}>
-                            <span>&#10006;</span>
-                        </Button>
-                    </Modal.Header>
-                    
-                    <Modal.Body>  
-                        {/* <Card> */}
-                            {messages.map((message, index) => { 
-                            if (message.id === yourID) { 
+                        {/* Header Content */}
+                        <Modal.Header>
+                            <h3>Chat Box</h3>
+                            <Button className="closeBtn" onClick={handleClose}>
+                                <span>&#10006;</span>
+                            </Button>
+                        </Modal.Header>
+                        
+                        <Modal.Body>  
+                            <div className="messages">
+                                {messages.map((message, index) => { 
+                                if (message.id === yourID) { 
+                                    return (
+                                        <p key={index}> {message.body}</p>
+                                    )
+                                }
                                 return (
-                                <Card>
-                                    key={index}
-                                    <Form.Group>
-                                        <Form.Text as="textarea" placeholder='Enter Message...'>
-                                            <p>{message.body}</p>
-                                        </Form.Text>
-                                    </Form.Group>
-                                </Card>
+                                    <p  key={index}>{message.body}</p>
                                 )
-                            }
-                            return (
-                                <Row key={index}>
-                                    <p>{message.body}</p>
-                                </Row>
-                            )
-                            })}
-                        {/* </Card> */}
-                        <Form onSubmit={sendMessage}>
-                            <Form.Control value={message} onChange={handleChange} as="textarea" rows={3} placeholder="Say something..." />
-                            
-                        </Form>
-                    </Modal.Body>
+                                })}
+                            </div>  
 
-                    <Modal.Footer>
-                        <Button className="btn-primary justify-content-end">Send</Button>
-                    </Modal.Footer>
-                </Modal>    
+                            <Form onSubmit={sendMessage}>
+                                <Form.Control value={message} onChange={handleChange} as="textarea" rows={3} placeholder="Say something..." />
+                            </Form>
+                        </Modal.Body>
+
+                        <Modal.Footer>
+                            <Button className="btn-primary justify-content-end" onClick={sendMessage}>Send</Button>
+                        </Modal.Footer>
+                    </Modal>    
 
 
                 <a className="mr-5" href={ `https://paypal.com/paypalme/${props.paypaluser}`} target="_blank" rel="noreferrer">
