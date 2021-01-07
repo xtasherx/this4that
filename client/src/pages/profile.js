@@ -31,7 +31,6 @@ export default function User () {
         .then(res => {
             setUserData(res.data);
             setSkillList(res.data.skills);
-            console.log(userData);
         })
     },[])
 
@@ -76,7 +75,7 @@ export default function User () {
                                         </Col>
                                 </Row>
                                 <Row>
-                                        <Footer />    
+                                        <Footer paypaluser={userData.paypaluser}/>    
                                 </Row>
                         </div>
 
