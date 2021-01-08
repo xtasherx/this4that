@@ -72,12 +72,12 @@ export default function ReviewUser () {
                                 </Form.Group>
 
                                 <Button 
-                                variant="primary" 
-                                type="submit" 
-                                className="mt-3" 
-                                onClick={handleFormSubmit} 
-                                >
-                                Submit
+                                        variant="primary" 
+                                        type="submit" 
+                                        className="mt-3" 
+                                        onClick={handleFormSubmit} 
+                                        >
+                                        Submit
                                 </Button>
                                 </Form>
                         </Container>

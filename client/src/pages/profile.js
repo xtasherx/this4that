@@ -39,7 +39,7 @@ export default function User () {
                 <NavBar />
                 <div className="userInfo">
                 <Container>
-                        <div className="profileCard mb-5">
+                        <div className="profileCard mb-5 px-5">
                                 <Row className="justify-content-end mr-4">
                                         <NavLink
                                         to="/profile-edit"
@@ -51,24 +51,29 @@ export default function User () {
                                         </NavLink>
                                 </Row>
                                 <Row>
-                                        <Col md="4">
+                                        <Col md="5">
                                                 <ProfileCard city={userData.city} state={userData.state} firstName={userData.firstname} lastName={userData.lastname} picture={userData.photourl} bio={userData.bio} traveldist={userData.traveldist}/>
                                         </Col>
-                                        <Col>
+                                        <Col md="6">
                                         <Card className="border-0">
 
-                                        <Card.Text className="mt-4">
+                                                <Card.Text className="mt-4">
                                                         <h5>Bio</h5>
                                                         <p>
                                                         {userData.bio}
                                                         </p>
                                                 </Card.Text>
 
-                                                <Card.Body className="skillSet d-flex flex-wrap">
-                                                {skillList.map((skill,i) => (
-                                                        <span key={i}>{skill}</span>
-                                                ))}
-                                                </Card.Body>
+                                                <Card.Text className="skillSet d-flex flex-wrap pl-3">
+                                                        <Row>
+                                                                <h5>Skills</h5>
+                                                        </Row>
+                                                        <Row>
+                                                                {skillList.map((skill,i) => (
+                                                                        <span className="mb-2" key={i}>{skill}</span>
+                                                                ))}
+                                                        </Row>
+                                                </Card.Text>
 
                                         </Card>
 

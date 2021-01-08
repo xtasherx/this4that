@@ -47,7 +47,7 @@ function handleButtonClick(e) {
                                         </div>
                                         <p className="mt-3"><strong>Distance able to travel:</strong><br /> {user.traveldist} miles</p>
 
-                                        <div className="border-0">
+                                        <div className="border-0 ">
                                                 <Card.Body className="skillSet d-flex flex-wrap"> 
                                                 {user.skills.map(skill => (
                                                         <span className="mb-2">{skill}</span> 
