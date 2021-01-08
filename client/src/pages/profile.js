@@ -23,18 +23,17 @@ import { FaPen } from "react-icons/fa";
 
 
 export default function User () {
-    const {id} = useParams();
-    const [userData, setUserData] = useState({});
-    const [skillList, setSkillList] = useState([]);
+        const {id} = useParams();
+        const [userData, setUserData] = useState({});
+        const [skillList, setSkillList] = useState([]);
 
-    useEffect(() => {
+        useEffect(() => {
         API.getUser(id)
         .then(res => {
-            setUserData(res.data);
-            setSkillList(res.data.skills);
-            console.log(userData);
+                setUserData(res.data);
+                setSkillList(res.data.skills);
         })
-    },[])
+},[])
 
         return(
                 <>
@@ -53,25 +52,25 @@ export default function User () {
                                         </NavLink>
                                 </Row>
                                 <Row>
-                                        <Col md="7">
-                                    <ProfileCard city={userData.city} state={userData.state} firstName={userData.firstname} lastName={userData.lastname} picture={userData.photourl}/>
+                                        <Col md="4">
+                                                <ProfileCard city={userData.city} state={userData.state} firstName={userData.firstname} lastName={userData.lastname} picture={userData.photourl} bio={userData.bio} traveldist={userData.traveldist}/>
                                         </Col>
                                         <Col>
                                         <Card className="border-0">
-                                     
-                                                <Card.Body className="skillSet card-deck mt-3">
-                                                {skillList.map((skill,i) => (
-                                                        <span key={i}>{skill}</span>
-                                                ))}
 
-                                                </Card.Body>
-
-                                                <Card.Text className="mt-4">
+                                        <Card.Text className="mt-4">
                                                         <h5>Bio</h5>
                                                         <p>
                                                         {userData.bio}
                                                         </p>
                                                 </Card.Text>
+
+                                                <Card.Body className="skillSet d-flex flex-wrap">
+                                                {skillList.map((skill,i) => (
+                                                        <span key={i}>{skill}</span>
+                                                ))}
+                                                </Card.Body>
+
                                         </Card>
 
                                         </Col>

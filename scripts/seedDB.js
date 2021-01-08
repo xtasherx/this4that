@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
-// This file empties the Books collection and inserts the books below
+// This file inserts the users below
+// Use: npm run seed
 
 mongoose.connect(
   process.env.MONGODB_URI ||
@@ -13,6 +14,7 @@ const userSeed = [
     _id: "564525252",
     firstname: "Neil",
     lastname: "deGrasse Tyson",
+    image: "https://randomuser.me/api/portraits/men/10.jpg",
     email: "ntyson@haydenplanetarium.edu",
     city: "Austin",
     state: "Texas",
@@ -29,6 +31,7 @@ const userSeed = [
     _id: "354198163",
     firstname: "Peggy",
     lastname: "Hill",
+    image: "https://randomuser.me/api/portraits/women/28.jpg",
     email: "mrspeggyhill@teachersofarlen.com",
     city: "Allen",
     state: "Texas",
@@ -45,6 +48,7 @@ const userSeed = [
     _id: "asdrf54964186541",
     firstname: "Walter",
     lastname: "White",
+    image: "https://randomuser.me/api/portraits/men/7.jpg",
     email: "heisenberg@bluesky.com",
     city: "San Antonio",
     state: "Texas",
@@ -61,6 +65,7 @@ const userSeed = [
     _id: "5a5sd4fa5fde889l",
     firstname: "Liz",
     lastname: "Lemon",
+    image: "https://randomuser.me/api/portraits/women/45.jpg",
     email: "lizlemon@cbs.com",
     city: "Austin",
     state: "Texas",
@@ -77,6 +82,7 @@ const userSeed = [
     _id: "4588klfjasd5s5fasd",
     firstname: "Jon",
     lastname: "Snow",
+    image: "https://randomuser.me/api/portraits/men/78.jpg",
     email: "jsnow@nightswatch.com",
     city: "New Braunfels",
     state: "Texas",
@@ -93,6 +99,7 @@ const userSeed = [
     _id: "235asd65df456",
     firstname: "Lucille",
     lastname: "Bluth",
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
     email: "lucille@bluthco.com",
     city: "Houston",
     state: "Texas",
@@ -109,6 +116,7 @@ const userSeed = [
     _id: "6rg45eth456",
     firstname: "Tony",
     lastname: "Soprano",
+    image: "https://randomuser.me/api/portraits/men/76.jpg",
     email: "tsoprano@notamobster.com",
     city: "Boerne",
     state: "Texas",
@@ -125,6 +133,7 @@ const userSeed = [
     _id: "thn415869dfgb416ajm",
     firstname: "Jeremy",
     lastname: "Henry",
+    image: "https://randomuser.me/api/portraits/men/91.jpg",
     email: "jhenry@itsjustjavascript.com",
     city: "San Antonio",
     state: "Texas",
@@ -141,6 +150,7 @@ const userSeed = [
     _id: "gvuil482vq48asdf456",
     firstname: "Lisa",
     lastname: "Turtle",
+    image: "https://randomuser.me/api/portraits/women/56.jpg",
     email: "lturtle@savedbythebell.com",
     city: "San Antonio",
     state: "Texas",
@@ -157,6 +167,7 @@ const userSeed = [
     _id: "lojka456486g",
     firstname: "Homer",
     lastname: "Simpson",
+    image: "https://randomuser.me/api/portraits/men/72.jpg",
     email: "homersimpson@donuts.com",
     city: "San Marcos",
     state: "Texas",

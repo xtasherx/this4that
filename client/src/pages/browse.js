@@ -19,8 +19,8 @@ export default function Browse () {
         useEffect(() => {
                 API.getUsers()
                 .then(res => {
-                   setUserData(res.data);     
-                   setData(res.data);    
+                        setUserData(res.data);     
+                        setData(res.data);    
                 })
                 .catch(err => console.log(err))
                 
@@ -37,7 +37,7 @@ export default function Browse () {
                                 setData(results);  
                 }
                 
-              }, [searchTerm]);
+        }, [searchTerm]);
         
 
         const handleChange = e => {
