@@ -2,8 +2,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Row from 'react-bootstrap/Row';
 import {Button, Modal, Card, Form } from 'react-bootstrap';
+import {Link} from "react-router-dom";
 import API from '../utils/API';
-import io from 'socket.io-client'
+import io from 'socket.io-client';
+import Review from "../components/reviews";
 
 
 // icons
@@ -12,9 +14,14 @@ import { FaComments, FaDollarSign, FaPenSquare } from "react-icons/fa";
 
 
 export default function Footer (props) {
+    console.log(props.id)
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleOpen = () => setShow(true);
+
+    const [reviewShow, setReviewShow] = useState(false);
+    const handleReviewClose = () => setReviewShow(false);
+    const handleReviewOpen = () => setReviewShow(true);
 
     
     const [yourID, setYourID] = useState();
@@ -54,6 +61,7 @@ export default function Footer (props) {
         setMessage(e.target.value);
     }
     
+
     return(
         <footer className="container-fluid text-center main-footer">
             <Row className="d-inline-flex">
@@ -101,11 +109,15 @@ export default function Footer (props) {
                 <p>pay</p>
                 </a>  
                 
-                <a href="https://google.com/" >
+                {/* potentially here if reviewShow etc to toggle Button */}
+
+                <Button onClick={handleReviewOpen}>
                 <span> < FaPenSquare size={25} /> </span>
                 <p>reviews</p>
-                </a>     
+                </Button>  
+
             </Row>
+           {reviewShow ? <Review/> : null }
         </footer>
     )
 };
