@@ -30,7 +30,7 @@ const App = () => {
             <ProtectedRoute path="/browse" component={Browse} />
             <ProtectedRoute path="/profile/:id" component={Profile} />
             <ProtectedRoute path="/profile-edit" component={ProfileEdit} />
-            <ProtectedRoute path="/review-user" component={ReviewUser} />
+            <ProtectedRoute path="/review-user/:id" component={ReviewUser} />
           </Switch>
         </div>
       </div>

@@ -16,7 +16,8 @@ export default function Redirect() {
                                                 firstname: given_name,
                                                 lastname: family_name,
                                                 email: email,
-                                                picurl: picture
+                                                picurl: picture,
+                                                reviews: ["There's nothing here! Leave a review!"]
                                         })
                                                 .then(window.location.pathname = "/profile-edit")
                                                 .catch(err => console.log(err));
