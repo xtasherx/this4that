@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form'
+import Form from 'react-bootstrap/Form';
 
 //Auth and Db 
 import { useAuth0 } from "@auth0/auth0-react";
@@ -11,7 +11,6 @@ import API from "../utils/API";
 
 // Components
 import NavBar from '../components/nav-bar';
-
 
 
 export default function ProfileEdit () {
@@ -27,10 +26,10 @@ export default function ProfileEdit () {
         useEffect(() => {
                 API.getUser(sub)
                 .then(res => {
-                    setUserData(res.data);
-                    console.log(userData)
+                        setUserData(res.data);
+                        console.log(userData)
                 })
-            },[])
+        },[])
 
         // Updates the user in the database with form data. 
         // routes back to profile.js
@@ -81,18 +80,17 @@ export default function ProfileEdit () {
                                 <img src= { userData.photourl } alt={userData.name} className="rounded-circle img-fluid mb-2" />
                                 <h2>{ userData.firstname} {userData.lastname}</h2>
                                 <h6 className="mb-5">{userData.email}</h6>
-          
                                 <Form.Row>
                                         <Form.Group as={Col} md="6" controlId="formPhoto">
-                                            <div className="mb-3">
-                                            <Form.File id="formcheck-api-regular">
-                                            <Form.Label>Profile Picture</Form.Label>
-                                            <Form.File.Input />
-                                            </Form.File>
-                                            </div>
+                                                <div className="mb-3">
+                                                <Form.File id="formcheck-api-regular">
+                                                <Form.Label>Profile Picture</Form.Label>
+                                                <Form.File.Input />
+                                                </Form.File>
+                                                </div>
                                         </Form.Group> 
                                 </Form.Row>
-    
+
                                 <Form.Row>
                                         <Form.Group as={Col} md="6" controlId="formPayPal">
                                         <Form.Label>PayPal UserName</Form.Label>
@@ -171,28 +169,26 @@ export default function ProfileEdit () {
                                         <Form.Label>Travel Distance</Form.Label>
                                         <Form.Control type="text" placeholder="Distance" name="traveldist" onChange={handleInputChange} />
                                         </Form.Group>
-                                    </Form.Row>
-          
+                                </Form.Row>
 
                                         <Form.Group controlId="exampleForm.ControlTextarea1">
                                         <Form.Label>Bio</Form.Label>
                                         <Form.Control as="textarea" rows={3} placeholder="Tell us a little about you..." name="bio" onChange={handleInputChange}/>
                                         </Form.Group>
-          
-          
+
                                         <Form.Label>Barter Skills</Form.Label>         
 
                                         <div className="skill-input">
                                                 <ul id="skill">
                                                         {skill.map((skills, index) => (
-                                                          <li key={index} className="skill">
-                                                          <span className='skill-title'>{skills}</span>
-                                                          <span className='skill-close-icon'
+                                                        <li key={index} className="skill">
+                                                        <span className='skill-title'>{skills}</span>
+                                                        <span className='skill-close-icon'
                                                                 onClick={() => removeSkill(index)}
-                                                          >
+                                                        >
                                                                 x
-                                                          </span>
-                                                          </li>
+                                                        </span>
+                                                        </li>
                                                 ))}
                                                 </ul>
                                                 <input

@@ -22,25 +22,24 @@ import { FaPen } from "react-icons/fa";
 
 
 export default function User () {
-    const {id} = useParams();
-    const [userData, setUserData] = useState({});
-    const [skillList, setSkillList] = useState([]);
+        const {id} = useParams();
+        const [userData, setUserData] = useState({});
+        const [skillList, setSkillList] = useState([]);
 
-    useEffect(() => {
+        useEffect(() => {
         API.getUser(id)
         .then(res => {
-            setUserData(res.data);
-            setSkillList(res.data.skills);
-            console.log(userData);
+                setUserData(res.data);
+                setSkillList(res.data.skills);
         })
-    },[])
+},[])
 
         return(
                 <>
                 <NavBar />
                 <div className="userInfo">
                 <Container>
-                        <div className="profileCard mb-5">
+                        <div className="profileCard mb-5 px-5">
                                 <Row className="justify-content-end mr-4">
                                         <NavLink
                                         to="/profile-edit"
@@ -52,18 +51,11 @@ export default function User () {
                                         </NavLink>
                                 </Row>
                                 <Row>
-                                        <Col md="7">
-                                    <ProfileCard city={userData.city} state={userData.state} firstName={userData.firstname} lastName={userData.lastname} picture={userData.photourl}/>
+                                        <Col md="5">
+                                                <ProfileCard city={userData.city} state={userData.state} firstName={userData.firstname} lastName={userData.lastname} picture={userData.photourl} bio={userData.bio} traveldist={userData.traveldist}/>
                                         </Col>
-                                        <Col>
+                                        <Col md="6">
                                         <Card className="border-0">
-                                     
-                                                <Card.Body className="skillSet card-deck mt-3">
-                                                {skillList.map((skill,i) => (
-                                                        <span key={i}>{skill}</span>
-                                                ))}
-
-                                                </Card.Body>
 
                                                 <Card.Text className="mt-4">
                                                         <h5>Bio</h5>
@@ -71,18 +63,31 @@ export default function User () {
                                                         {userData.bio}
                                                         </p>
                                                 </Card.Text>
+
+                                                <Card.Text className="skillSet d-flex flex-wrap">
+                                                        <Row className="col-12">
+                                                                <h5>Skills</h5>
+                                                        </Row>
+                                                        <Row className="pl-3">
+                                                                {skillList.map((skill,i) => (
+                                                                        <span className="mb-2" key={i}>{skill}</span>
+                                                                ))}
+                                                        </Row>
+                                                </Card.Text>
+
                                         </Card>
 
                                         </Col>
                                 </Row>
                                 <Row>
-                                        <Footer />    
+                                        <Footer paypaluser={userData.paypaluser} id={userData._id}/>   
+                                       
                                 </Row>
                         </div>
-
+                            
                         <Row className="profRev">
                                 <h4 className="mt-3 pb-2 mx-auto">Reviews</h4>
-                                <ReviewSlider />
+                                <ReviewSlider id={userData.id} reviews={userData.reviews}/>
                         </Row>
                 </Container>
                 </div>
@@ -90,3 +95,4 @@ export default function User () {
         )
         
 }
+
