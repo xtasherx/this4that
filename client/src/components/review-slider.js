@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 // icons
 import { FaStar } from "react-icons/fa";
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 // review info
 import reviews from "./reviews";
