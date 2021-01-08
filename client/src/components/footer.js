@@ -1,23 +1,25 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import io from 'socket.io-client'
-
-// Booststrap
 import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import Form from 'react-bootstrap/Form'
+import {Button, Modal, Card, Form } from 'react-bootstrap';
+import {NavLink} from "react-router-dom";
+import API from '../utils/API';
+import io from 'socket.io-client';
+import Review from "../components/reviews";
+
 
 // icons
 import { FaComments, FaDollarSign, FaPenSquare } from "react-icons/fa";
 
 // Socket.io 
 export default function Footer (props) {
+    
+    let userId = "";
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleOpen = () => setShow(true);
 
-    
+
     const [yourID, setYourID] = useState();
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState("");
@@ -56,8 +58,22 @@ export default function Footer (props) {
         setMessage(e.target.value);
     }
 
+    //code for review button routing 
+    function handleButtonClick(e) { 
+        userId = props.id;
+        console.log(userId);
+        console.log(e.target.value);
+        API.getUser(props.id)
+        .then(res => {
+                console.log(res.data);
+                window.location.pathname = `/review-user/${userId}`;          
+        })
+        .catch(err => console.log(err))
+}
+
 
     
+
     return(
         <footer className="container-fluid text-center main-footer">
             <Row className="d-inline-flex">
@@ -109,11 +125,14 @@ export default function Footer (props) {
                 <p>pay</p>
                 </a>  
                 
-                <a href="./review-user">
+
+                <Button type="button" className="btn btn-link mr-5" value={props.id} onClick={handleButtonClick} >
                 <span> < FaPenSquare size={25} /> </span>
                 <p>review</p>
-                </a>     
+                </Button>
+
             </Row>
+
         </footer>
     )
 };

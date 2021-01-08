@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {NavLink} from "react-router-dom";
 import {useParams} from 'react-router';
+import Review from "../components/reviews"
 
 //Bootstrap
 import Container from 'react-bootstrap/Container';
@@ -75,13 +76,14 @@ export default function User () {
                                         </Col>
                                 </Row>
                                 <Row>
-                                        <Footer paypaluser={userData.paypaluser}/>    
+                                        <Footer paypaluser={userData.paypaluser} id={userData._id}/>   
+                                       
                                 </Row>
                         </div>
-
+                            
                         <Row className="profRev">
                                 <h4 className="mt-3 pb-2 mx-auto">Reviews</h4>
-                                <ReviewSlider />
+                                <ReviewSlider id={userData.id} reviews={userData.reviews}/>
                         </Row>
                 </Container>
                 </div>
@@ -89,3 +91,4 @@ export default function User () {
         )
         
 }
+
