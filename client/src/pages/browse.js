@@ -51,7 +51,7 @@ export default function Browse () {
                 <NavBar />
                 <div className="proEdit">
                 <Container className="pt-4">
-                        <div className ="searchBar my-3">
+                        <div className ="searchBar mb-3">
                         <Search        
                         value={searchTerm}
                         onChange={handleChange}/>

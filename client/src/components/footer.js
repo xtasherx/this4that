@@ -2,10 +2,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Row from 'react-bootstrap/Row';
 import {Button, Modal, Card, Form } from 'react-bootstrap';
-import {NavLink} from "react-router-dom";
+// import {NavLink} from "react-router-dom";
 import API from '../utils/API';
 import io from 'socket.io-client';
-import Review from "../components/reviews";
+// import Review from "../components/reviews";
 
 
 // icons
@@ -13,16 +13,19 @@ import { FaComments, FaDollarSign, FaPenSquare } from "react-icons/fa";
 
 // Socket.io 
 export default function Footer (props) {
+    // Modal Variables
     
     let userId = "";
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleOpen = () => setShow(true);
 
+    // Messenger variables
 
     const [yourID, setYourID] = useState();
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState("");
+    const container = document.getElementById("msgContainer");
     
     const socketRef = useRef();
     
@@ -44,20 +47,26 @@ export default function Footer (props) {
     }
     
     function sendMessage(e) {
-        e.preventDefault();
         const messageObject = {
         body: message,
         id: yourID,
         };
         setMessage("");
         socketRef.current.emit("send message", messageObject);
-        
+        container.scrollTop = container.scrollHeight;
     }
     
     function handleChange(e) {
         setMessage(e.target.value);
     }
 
+    function handleKeypress(e) {
+        //it triggers by pressing the enter key
+        if (e.keyCode === 13) {
+        sendMessage();
+        e.preventDefault();
+        }
+    };
     //code for review button routing 
     function handleButtonClick(e) { 
         userId = props.id;
@@ -72,10 +81,8 @@ export default function Footer (props) {
 }
 
 
-    
-
     return(
-        <footer className="container-fluid text-center main-footer">
+        <footer className="container-fluid text-center main-footer pb-3 pt-5">
             <Row className="d-inline-flex">
                 
                 {/* Message Feature */}
@@ -89,18 +96,18 @@ export default function Footer (props) {
                     
                         {/* Header Content */}
                         <Modal.Header>
-                            <h3>Chat Box</h3>
-                            <Button className="closeBtn" onClick={handleClose}>
+                            <h3>{props.firstName} Chat Box</h3>
+                            <Button  className="closeBtn" onClick={handleClose}>
                                 <span>&#10006;</span>
                             </Button>
                         </Modal.Header>
                         
                         <Modal.Body>  
-                            <div className="messages">
+                            <div id="msgContainer" className="messages">
                                 {messages.map((message, index) => { 
                                 if (message.id === yourID) { 
                                     return (
-                                        <p key={index}> {message.body}</p>
+                                        <p className="sentMsg" key={index}> {message.body}</p>
                                     )
                                 }
                                 return (
@@ -109,13 +116,13 @@ export default function Footer (props) {
                                 })}
                             </div>  
 
-                            <Form onSubmit={sendMessage}>
-                                <Form.Control value={message} onChange={handleChange} as="textarea" rows={3} placeholder="Say something..." />
+                            <Form onKeyDown={handleKeypress} >
+                                <Form.Control value={message} as="textarea" rows={3} placeholder="Say something..."  onChange={handleChange} />
                             </Form>
                         </Modal.Body>
 
                         <Modal.Footer>
-                            <Button className="btn-primary justify-content-end" onClick={sendMessage}>Send</Button>
+                            <Button type="submit" className="btn-primary justify-content-end" onClick={sendMessage}>Send</Button>
                         </Modal.Footer>
                     </Modal>    
 

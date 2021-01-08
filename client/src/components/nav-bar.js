@@ -12,12 +12,12 @@ const NavBar = () => {
   return (
     // update classnames for styling---please do not edit wrapping code--it will break user authentication
     
-    <Navbar collapseOnSelect expand="lg" className="navBar">
+    <Navbar collapseOnSelect expand="lg" className="navBar" variant="dark">
     <Navbar.Brand>
         <h1>Barter App</h1>
     </Navbar.Brand> 
 
-    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+    <Navbar.Toggle aria-controls="responsive-navbar-nav" className="btn" />
         <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
             <MainNav />

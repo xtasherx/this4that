@@ -20,7 +20,6 @@ export default function ReviewUser () {
         const [userData, setUserData] = useState({});
         const [formObject, setFormObject] = useState({});
 
-       
         function handleFormSubmit(event) {   
                 // sets reviewArray to the db's current reviews array
                 reviewArray = userData.reviews;
@@ -83,12 +82,12 @@ export default function ReviewUser () {
                                 </Form.Group>
 
                                 <Button 
-                                variant="primary" 
-                                type="submit" 
-                                className="mt-3" 
-                                onClick={handleFormSubmit} 
-                                >
-                                Submit
+                                        variant="primary" 
+                                        type="submit" 
+                                        className="mt-3" 
+                                        onClick={handleFormSubmit} 
+                                        >
+                                        Submit
                                 </Button>
                                 </Form>
                         </Container>
