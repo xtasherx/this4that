@@ -22,7 +22,7 @@ function handleButtonClick(e) {
                 window.location.pathname = `/profile/${userId}`;          
         })
         .catch(err => console.log(err))
-}
+}       console.log(props.data)
         return (
 
                 <div className="smCard d-flex flex-wrap justify-content-center p-0"> 

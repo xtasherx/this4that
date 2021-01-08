@@ -1,6 +1,6 @@
 import React from "react";
 
-import ReviewSlide from "../components/review-slider";
+import ReviewSlideLogin from "../components/review-slider-login";
 
 //Bootstrap
 import Jumbotron from 'react-bootstrap/Jumbotron';
@@ -23,7 +23,7 @@ export default function Home () {
                         </Container>
                 </Jumbotron>
                 <Container>
-                        <ReviewSlide />  
+                        <ReviewSlideLogin />  
                 </Container>
         </div>
         )

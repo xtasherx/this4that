@@ -83,7 +83,7 @@ export default function User () {
                             
                         <Row className="profRev">
                                 <h4 className="mt-3 pb-2 mx-auto">Reviews</h4>
-                                <ReviewSlider />
+                                <ReviewSlider id={userData.id} reviews={userData.reviews}/>
                         </Row>
                 </Container>
                 </div>
@@ -91,3 +91,4 @@ export default function User () {
         )
         
 }
+

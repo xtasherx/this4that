@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Row from 'react-bootstrap/Row';
 import {Button, Modal, Card, Form } from 'react-bootstrap';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import API from '../utils/API';
 import io from 'socket.io-client';
 import Review from "../components/reviews";
@@ -13,7 +13,8 @@ import { FaComments, FaDollarSign, FaPenSquare } from "react-icons/fa";
 
 // Socket.io 
 export default function Footer (props) {
-    console.log(props.id)
+    
+    let userId = "";
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleOpen = () => setShow(true);
@@ -56,6 +57,19 @@ export default function Footer (props) {
     function handleChange(e) {
         setMessage(e.target.value);
     }
+
+    //code for review button routing 
+    function handleButtonClick(e) { 
+        userId = props.id;
+        console.log(userId);
+        console.log(e.target.value);
+        API.getUser(props.id)
+        .then(res => {
+                console.log(res.data);
+                window.location.pathname = `/review-user/${userId}`;          
+        })
+        .catch(err => console.log(err))
+}
 
 
     
@@ -111,11 +125,12 @@ export default function Footer (props) {
                 <p>pay</p>
                 </a>  
                 
-  
-                <a href="./review-user">
+
+                <Button type="button" className="btn btn-link mr-5" value={props.id} onClick={handleButtonClick} >
                 <span> < FaPenSquare size={25} /> </span>
                 <p>review</p>
-                </a>     
+                </Button>
+
             </Row>
 
         </footer>
