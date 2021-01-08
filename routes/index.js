@@ -9,7 +9,6 @@ router.use("/api", apiRoutes);
 router.use(function(req, res) {
   console.log(__dirname);
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
- 
 });
 
 module.exports = router;

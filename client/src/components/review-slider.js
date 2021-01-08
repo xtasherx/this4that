@@ -4,19 +4,37 @@ import React, { Component } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-// Components
-import ReviewCard from './review-card';
+// review info
+import reviews from "./reviews";
+
+// icons
+import { FaStar } from "react-icons/fa";
 
 class ReviewSlide extends Component {
     render() {
         return (
         <div className="revSlide">
-            <Carousel autoplay={ false } infiniteLoop={false} showArrows={true} showStatus={false} showThumbs={false}>
-                <ReviewCard />
-                <ReviewCard />
-                <ReviewCard />
-                <ReviewCard />
-                <ReviewCard />
+            <Carousel autoplay={ false } infiniteLoop={true} showArrows={true} showStatus={false} showThumbs={false}>
+                
+            {reviews.map((text, id) => (
+                <div key={id} className={id}>
+                    <div className="reviewCard align-middle">
+                        <p className="mx-auto mt-2 reviewText"> 
+                            {text.review}
+                        </p>
+
+                        <div className="setStar">
+                            {[...Array(5)].map((star, i) => {
+                                return ( 
+                                    <FaStar />
+                                );
+                            })}
+                        </div>
+                    </div>
+                </div>
+            ))}
+
+
             </Carousel>
         </div>
         );

@@ -1,7 +1,5 @@
 import React from "react";
 
-// Bootstrap 
-// import Form from 'react-bootstrap/Form';
 
 export default function Search (props) {
     return (

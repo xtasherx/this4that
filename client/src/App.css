@@ -24,24 +24,38 @@
   background-color: #246476 !important;
   color: #fff !important;
   font-weight: 600 !important;
+  box-shadow: none !important;
 }
 
 .authenLogout {
   background-color: #e9bf49 !important;
   color: #333333 !important;
   font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
+.authenLogout:hover{ 
+  color: #fff !important;
+  background-color: #246476 !important;
 }
 
 .authenSignup {
   background-color: #246476 !important;
   color: #fff !important;
   font-weight: 600 !important;
+  box-shadow: none !important;
 }
 
 .search {
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
+  max-width: 1200px !important;
+  padding: 0 !important;
+  margin: 0 auto;
 }
 
 /* Home Elements */
@@ -51,18 +65,6 @@
   padding: 10em 0 !important;
 }
 
-/* Review Slider */
-.revSlide {
-  margin: 2em 0 0;
-  width: 100%;
-  margin: 0 auto;
-}
-.carousel-root,
-.carousel-slider,
-.slider-wrapper,
-.slide {
-  background-color: rgb(223, 223, 223) !important;
-}
 /* Profile Page */
 .userInfo {
   padding: 4em 0 0;
@@ -71,12 +73,12 @@
 
 .profileCard {
   border-radius: 5px;
-  padding: 2em 30px;
+  padding: 2em 30px 0;
   background-color: #fff;
 }
 
 .profile {
-  padding: 1em;
+  padding: 1em 1em 0;
 }
 
 .profCircle {
@@ -84,17 +86,48 @@
   border-radius: 50%;
 }
 
-.edit,
-.edit:hover {
+.edit {
   color: #8baec0;
   text-decoration: none;
 }
 
+.edit:hover {
+  color: #5e90a8;
+  text-decoration: none;
+}
+
+.bio{
+  margin: 0 30px;
+  padding: 0 1em 1em;
+}
+
+
+/* Messing Modal */
+.closeBtn{
+  background: none!important;
+	color: inherit!important;
+	border: none!important;
+	padding: 0!important;
+	font: inherit!important;
+	cursor: pointer!important;
+  outline: inherit!important;
+  
+}
+
+
+.closeBtn span{
+  font-size: 2em;
+}
+
+
+
 /* Profile Edit */
 .proEdit {
   background-color: #063044;
+  width: 100%;
   height: 100%;
   min-height: 100vh;
+  padding-bottom: 2em;
 }
 
 .edit-form {
@@ -120,6 +153,15 @@ label {
   color: #333333;
   font-weight: 600;
 }
+
+/* Review User */
+.submitReview {
+  background-color: #063044;
+  color: #fff;
+  height: 100%;
+  min-height: 100vh;
+}
+
 
 /* Skills Input */
 .skill-input input {
@@ -174,55 +216,49 @@ input:focus {
   cursor: pointer;
 }
 
-/* Skill Set */
-.skillSet {
-  padding: 1em;
-}
-
 .skillSet span {
   background-color: #7cad3e;
   font-size: 14px;
   color: #fff;
   padding: 0.5em 10px;
-  margin: 0.25em 5px;
+  margin-right: 5px;
   border-radius: 5px;
 }
 
 /* Review Slider */
 .revSlide {
-  margin: 0 auto;
-  clear: both;
+  margin: 0 auto 3em;
+  width: 100%;
 }
 
 .carousel-slider,
 .slider-wrapper,
 .slide {
   background-color: #fff !important;
-  padding: 0.25em 0 0.5em;
+  margin: 0.25em 0 1em !important;
   border-radius: 5px;
 }
 .carousel.carousel-slider .control-arrow:active,
 .carousel.carousel-slider .control-arrow:hover {
   background-color: transparent !important;
+  
 }
 
 /* left arrow */
 .carousel .control-prev.control-arrow:before {
   border-right: 8px solid #e9bf49 !important;
+  margin-left: 20px !important;
 }
 /* right arrow */
 .carousel .control-next.control-arrow:before {
   border-left: 8px solid #e9bf49 !important;
+  margin-right: 20px !important;
 }
 
 .setStar {
   color: #ffc107;
 }
 
-.reviewCard button {
-  height: 100%;
-  bottom: 0;
-}
 .profRev {
   background-color: #063044;
   padding: 1em;
@@ -239,11 +275,10 @@ input:focus {
   background-color: bisque;
 }
 
-/* Profile */
 .reviewCard {
   text-align: center;
   background-color: none;
-  padding: 1em 0;
+  padding: 1em 0px;
   width: auto;
 }
 
@@ -267,7 +302,6 @@ input[type="radio"] {
 }
 
 /* Browse Profiles */
-
 .searchBar input {
   width: 50%;
   border-radius: 5px;
@@ -277,26 +311,45 @@ input[type="radio"] {
   padding: 0.25em 1em;
 }
 
-.smCard,
-.card .btn .btn-primary,
-.smCard,
-.card .btn .btn-primary:hover,
-.smCard,
-.card .btn .btn-primary:active,
-.smCard,
-.card .btn .btn-primary:focus {
+.smCard{
+  width: 100%;
+  /* padding: 0 5%; */
+}
+
+.card {
+  width: 100%;
+  border-radius: 10px !important;
   border: 0px none !important;
-  background-color: transparent !important;
-  border-radius: 2px;
-  height: auto;
-  margin: 1em auto;
-  width: 33.3%;
-  display: flex;
+  margin: 1em 10px 0;
+}
+
+.img-container{
+  padding: 1em 10px 0;
+  margin: 0 auto;
 }
 
 .smContent {
-  padding: 1em !important;
+  padding: 1em 0 2em!important;
   color: #063044;
+  text-align: center;
+}
+
+.viewPro, .viewPro:active, .viewPro:focus{
+  width: 100%;
+  position:absolute;
+  bottom: 0 !important;
+  border: 0px none !important;
+  /* top-left, top-right, bottom-right, bottom left */
+  border-radius: 0 0 5px 5px !important;
+  box-shadow: none !important;
+  background-color: #e9bf49 !important;
+  color: #333333 !important;
+  font-weight: 600 !important;
+}
+
+.viewPro:hover{ 
+  color: #fff !important;
+  background-color: #246476 !important;
 }
 
 /* Footer */
@@ -308,10 +361,31 @@ footer {
   position: relative;
 }
 
-footer a,
-footer a:hover {
+footer a{
   color: #e9bf49;
   text-decoration: none;
+}
+
+footer a:hover{ 
+  color: #246476;
+  text-decoration: none;
+}
+
+footer .btn-link{
+  background: none!important;
+	color: inherit!important;
+	border: none!important;
+	padding: 0!important;
+	font: inherit!important;
+	cursor: pointer!important;
+  outline: inherit!important;
+  color: #e9bf49!important;
+  text-decoration: none!important;
+}
+
+footer .btn-link:hover{
+  color: #246476 !important;
+  text-decoration: none!important;
 }
 
 /* 
@@ -320,26 +394,18 @@ footer a:hover {
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+
 }
+
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .revSlide {
-    width: 80%;
-  }
+
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .revSlide {
-    width: 60%;
-  }
-}
-@media (min-width: 768px) {
-}
 
-/* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
