@@ -7,11 +7,6 @@ import API from '../utils/API';
 import io from 'socket.io-client';
 import Review from "../components/reviews";
 
-// Booststrap
-import Row from 'react-bootstrap/Row';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import Form from 'react-bootstrap/Form'
 
 // icons
 import { FaComments, FaDollarSign, FaPenSquare } from "react-icons/fa";
@@ -23,11 +18,7 @@ export default function Footer (props) {
     const handleClose = () => setShow(false);
     const handleOpen = () => setShow(true);
 
-    const [reviewShow, setReviewShow] = useState(false);
-    const handleReviewClose = () => setReviewShow(false);
-    const handleReviewOpen = () => setReviewShow(true);
 
-    
     const [yourID, setYourID] = useState();
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState("");
@@ -120,19 +111,13 @@ export default function Footer (props) {
                 <p>pay</p>
                 </a>  
                 
-                {/* potentially here if reviewShow etc to toggle Button */}
-
-                <Button onClick={handleReviewOpen}>
-                <span> < FaPenSquare size={25} /> </span>
-                <p>reviews</p>
-                </Button>  
-
+  
                 <a href="./review-user">
                 <span> < FaPenSquare size={25} /> </span>
                 <p>review</p>
                 </a>     
             </Row>
-           {reviewShow ? <Review/> : null }
+
         </footer>
     )
 };
