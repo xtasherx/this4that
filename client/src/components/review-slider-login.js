@@ -1,30 +1,26 @@
+import React, { Component } from 'react';
+
 // React Slider imports
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-// icons
-import { FaStar } from "react-icons/fa";
-// import { useEffect } from 'react';
 
 // review info
-// import reviews from "./reviews";
-let array = [];
+import reviews from "./reviews";
 
+// icons
+import { FaStar } from "react-icons/fa";
 
-const ReviewSlide = (props) => {
-    console.log(props.reviews)
-
-    array=props.reviews;
-    console.log(array)
-
+class ReviewSlideLogin extends Component {
+    render() {
         return (
         <div className="revSlide">
             <Carousel autoplay={ false } infiniteLoop={true} showArrows={true} showStatus={false} showThumbs={false}>
                 
-            {props.reviews.map((text, id) => (
+            {reviews.map((text, id) => (
                 <div key={id} className={id}>
                     <div className="reviewCard align-middle">
                         <p className="mx-auto mt-2 reviewText"> 
-                            {text}
+                            {text.review}
                         </p>
 
                         <div className="setStar">
@@ -42,13 +38,7 @@ const ReviewSlide = (props) => {
             </Carousel>
         </div>
         );
-
+    }
 }
 
-export default ReviewSlide;
-
-ReviewSlide.defaultProps = {
-    reviews: ["There's nothing here! Leave a review!"]
-}
-
-
+export default ReviewSlideLogin;
