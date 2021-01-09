@@ -111,7 +111,7 @@ export default function Footer (props) {
                                     )
                                 }
                                 return (
-                                    <p  key={index}>{message.body}</p>
+                                    <p className="reMsg float-end" key={index}>{message.body}</p>
                                 )
                                 })}
                             </div>  
@@ -122,7 +122,7 @@ export default function Footer (props) {
                         </Modal.Body>
 
                         <Modal.Footer>
-                            <Button type="submit" className="btn-primary justify-content-end" onClick={sendMessage}>Send</Button>
+                            <Button type="submit" className="btn authenLogout justify-content-end" onClick={sendMessage}>Send</Button>
                         </Modal.Footer>
                     </Modal>    
 
