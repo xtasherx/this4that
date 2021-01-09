@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# this4that
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![badge](https://img.shields.io/badge/license-MIT-orange)
+![badge](https://img.shields.io/badge/build-passing-brightgreen)
 
-## Available Scripts
+this4that is an easy and fun way to SAVE MONEY while still obtaining any services you require!  Join the barter community and trade talents and services, in any combination.
+this4that offers a way for you to get value out of your many talents while exploring the fantastic abilities of others in your community.  You will also have fun searching, making deals, and will likely meet a few awesome people along the way!
 
-In the project directory, you can run:
+* <a href="https://peaceful-ocean-96286.herokuapp.com/">Check out this4that deployed on Heroku.</a>
 
-### `npm start`
+## Table of Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Technologies](#technologies)
+* [Features](#features)
+* [Contributing Authors](#contributors)
+* [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Description
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+this4that is a mobile-first bartering application which allows users to exchange their services and skills with one another. Users have the option to barter directly with one another for a fair exchange of services or users can pay others directly using Paypal. 
 
-### `npm test`
+# Technologies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Created using React with a Mongo database, Mongoose schema, and Express to handle routes. User authentication handled by Auth0, chat feature using socket.io, styled with Bootstrap, and payment options connected to PayPal.
+    
+## Features
 
-### `npm run build`
+* Authentication using Auth0 allows users to login with their Google credentials.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Users can set up profiles with their information, including a bio, skills for trade, and distance willing to travel.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Users can browse for users and search by skill.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Gives users the opportunity to barter directly with one another via a chat option or to pay others for services.
 
-### `npm run eject`
+* Users are able to leave reviews for barter or service exchanges from others.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Contributing Authors
+* Natasha Harrington: Auth0, file structure, database set up, backend and front end functionality, 
+* Ashley Hunt: UI/UX, front end design
+* Eddie Villarreal: Chat feature and functionality using socket.io, 
+* Casandra Cutter: Payment functionality, seed data, general team support
+    
+# License
+MIT
