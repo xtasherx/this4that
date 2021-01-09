@@ -81,10 +81,10 @@ export default function User () {
                                 </Row>
                                 <Row>
                                         <Footer paypaluser={userData.paypaluser} id={userData._id}/>   
-                                       
+                                
                                 </Row>
                         </div>
-                            
+                        
                         <Row className="profRev">
                                 <h4 className="mt-3 pb-2 mx-auto">Reviews</h4>
                                 <ReviewSlider id={userData.id} reviews={userData.reviews}/>

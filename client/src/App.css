@@ -434,6 +434,8 @@ footer a:hover{
   padding: .25em 15px;
   width: fit-content;
   font-weight: 500;
+  float: left;
+  clear:both;
 }
 
 .reMsg{
