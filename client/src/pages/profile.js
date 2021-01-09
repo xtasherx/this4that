@@ -39,7 +39,7 @@ export default function User () {
                 <NavBar />
                 <div className="userInfo">
                 <Container>
-                        <div className="profileCard mb-5 px-5">
+                        <div className="profileCard mb-5 px-3">
                                 <Row className="justify-content-end mr-4">
                                         <NavLink
                                         to="/profile-edit"

@@ -17,7 +17,7 @@ export default function Home () {
                         <Container >
                                 <img
                                         src="https://github.com/xtasherx/project3/blob/main/client/public/this2that-logo.png?raw=true"
-                                        width="400"
+                                        width="300"
                                         className="d-inline-block align-middle mb-3"
                                         alt="this4that logo"
                                 />

@@ -82,7 +82,7 @@ export default function Footer (props) {
 
 
     return(
-        <footer className="container-fluid text-center main-footer pb-3 pt-5">
+        <footer className="container-fluid text-center main-footer pb-3 pt-5 mt-3">
             <Row className="d-inline-flex">
                 
                 {/* Message Feature */}
@@ -133,7 +133,7 @@ export default function Footer (props) {
                 </a>  
                 
 
-                <Button type="button" className="btn btn-link mr-5" value={props.id} onClick={handleButtonClick} >
+                <Button type="button" className="btn btn-link" value={props.id} onClick={handleButtonClick} >
                 <span> < FaPenSquare size={25} /> </span>
                 <p>review</p>
                 </Button>
