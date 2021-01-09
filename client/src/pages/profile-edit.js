@@ -9,6 +9,7 @@ import Form from 'react-bootstrap/Form';
 import { useAuth0 } from "@auth0/auth0-react";
 import API from "../utils/API";
 
+
 // Components
 import NavBar from '../components/nav-bar';
 
@@ -22,6 +23,8 @@ export default function ProfileEdit () {
         //user info typed into form to pass to db
         const [formObject, setFormObject] = useState({});
 
+        
+
         //call to db to get info for display on this page. 
         useEffect(() => {
                 API.getUser(sub)
@@ -30,6 +33,7 @@ export default function ProfileEdit () {
                         console.log(userData)
                 })
         },[])
+
 
         // Updates the user in the database with form data. 
         // routes back to profile.js
@@ -46,14 +50,18 @@ export default function ProfileEdit () {
                 photourl: picture,
                 })
                 .then( window.location.pathname = `/profile/${sub}` )
-                .catch(err => console.log(err));    
+                .catch(err => console.log(err));  
+                localStorage.setItem(event.target.name, event.target.value); 
+                
         };
 
           // Handles updating component state when the user types into the input field
         function handleInputChange(event) {
                 const { name, value } = event.target;
                 setFormObject({...formObject, [name]: value})
+                localStorage.setItem(event.target.name, event.target.value); 
         };
+
 
         //state for the skills section 
         const [skill, setSkill] = useState([]);
@@ -70,7 +78,6 @@ export default function ProfileEdit () {
         
 
         return(
-
                 // path needs to be changed to /profile/:id once you figure that out 
                 <>
                 <NavBar />
@@ -94,21 +101,21 @@ export default function ProfileEdit () {
                                 <Form.Row>
                                         <Form.Group as={Col} md="6" controlId="formPayPal">
                                         <Form.Label>PayPal UserName</Form.Label>
-                                        <Form.Control type="text" placeholder="User Name" name="paypaluser" onChange={handleInputChange}/>
+                                                <Form.Control  type="text" placeholder="User Name" value={localStorage.getItem(userData.paypaluser)} name="paypaluser" onChange={handleInputChange} />
                                         </Form.Group>
                                         <Form.Group as={Col} md="6" controlId="formPhoneNumber">
                                         <Form.Label>Phone</Form.Label>
-                                        <Form.Control type="phone" placeholder="Phone Number" name="phone" onChange={handleInputChange}/>
+                                                <Form.Control type="text" placeholder="Phone Number" value={localStorage.getItem(userData.phone)} name="phone" onChange={handleInputChange}/>
                                         </Form.Group>
                                 </Form.Row>
                                 <Form.Row>
                                         <Form.Group as={Col} md="4" controlId="formGridCity">
                                         <Form.Label>City</Form.Label>
-                                        <Form.Control type="text" name="city" onChange={handleInputChange} placeholder="City"/ >
+                                        <Form.Control type="text" value={localStorage.getItem(userData.city)} name="city" onChange={handleInputChange} placeholder="City" />
                                         </Form.Group>
                                         <Form.Group as={Col} md="4" controlId="formGridState">
                                         <Form.Label>State</Form.Label>
-                                        <Form.Control as="select" defaultValue="Choose..." name="state" onChange={handleInputChange}>
+                                        <Form.Control as="select" type="dropdown" defaultValue="Choose..." value={localStorage.getItem(userData.state)} name="state" onChange={handleInputChange}>
                                                 <option>Choose...</option>
                                                 <option value="">N/A</option>
                                                 <option value="AK">Alaska</option>
@@ -167,13 +174,13 @@ export default function ProfileEdit () {
                                         </Form.Group>
                                         <Form.Group as={Col} md="4" controlId="formTravelDist">
                                         <Form.Label>Travel Distance</Form.Label>
-                                        <Form.Control type="text" placeholder="Distance" name="traveldist" onChange={handleInputChange} />
+                                        <Form.Control type="text" placeholder="Distance" value={localStorage.getItem(userData.traveldist)} name="traveldist" onChange={handleInputChange} />
                                         </Form.Group>
                                 </Form.Row>
 
                                         <Form.Group controlId="exampleForm.ControlTextarea1">
                                         <Form.Label>Bio</Form.Label>
-                                        <Form.Control as="textarea" rows={3} placeholder="Tell us a little about you..." name="bio" onChange={handleInputChange}/>
+                                        <Form.Control as="textarea" type="bio" rows={3} placeholder="Tell us a little about you..." value={localStorage.getItem(userData.bio)} name="bio" onChange={handleInputChange} />
                                         </Form.Group>
 
                                         <Form.Label>Barter Skills</Form.Label>         
@@ -183,9 +190,7 @@ export default function ProfileEdit () {
                                                         {skill.map((skills, index) => (
                                                         <li key={index} className="skill">
                                                         <span className='skill-title'>{skills}</span>
-                                                        <span className='skill-close-icon'
-                                                                onClick={() => removeSkill(index)}
-                                                        >
+                                                        <span className='skill-close-icon'onClick={() => removeSkill(index)}>
                                                                 x
                                                         </span>
                                                         </li>
@@ -198,12 +203,7 @@ export default function ProfileEdit () {
                                                 />
 		                        </div>
 
-                                <Button 
-                                variant="primary" 
-                                type="submit" 
-                                className="mt-3" 
-                                onClick={handleFormSubmit} 
-                                >
+                                <Button variant="primary" type="submit" className="mt-3" onClick={handleFormSubmit} >
                                         Submit
                                 </Button>
                         </Form>

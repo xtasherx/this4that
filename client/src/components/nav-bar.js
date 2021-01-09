@@ -14,7 +14,12 @@ const NavBar = () => {
     
     <Navbar collapseOnSelect expand="lg" className="navBar" variant="dark">
     <Navbar.Brand>
-        <h1>Barter App</h1>
+    <img
+        src="https://drive.google.com/file/d/1hz4yRGCb2weQulZ2surJ7Zv9eW7pesZQ/view?usp=sharing"
+        width="100"
+        className="d-inline-block align-top"
+        alt="this4that logo"
+      />
     </Navbar.Brand> 
 
     <Navbar.Toggle aria-controls="responsive-navbar-nav" className="btn" />
