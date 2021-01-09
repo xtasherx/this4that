@@ -3,10 +3,12 @@
 ![badge](https://img.shields.io/badge/license-MIT-orange)
 ![badge](https://img.shields.io/badge/build-passing-brightgreen)
 
-this4that is an easy and fun way to SAVE MONEY while still obtaining any services you require!  Join the barter community and trade talents and services, in any combination.
-this4that offers a way for you to get value out of your many talents while exploring the fantastic abilities of others in your community.  You will also have fun searching, making deals, and will likely meet a few awesome people along the way!
+![logo](client/public/this2that-logo.png)
 
-* <a href="https://peaceful-ocean-96286.herokuapp.com/">Check out this4that deployed on Heroku.</a>
+this4that is an easy and fun way to SAVE MONEY while still obtaining any services you require!  Join the barter community and trade talents and services, in any combination.
+this4that offers a way for you to get value out of your many talents while exploring the fantastic abilities of others in your community.  You will also have fun searching, making deals, and will likely meet a few awesome people along the way! <a href="https://peaceful-ocean-96286.herokuapp.com/">Check out this4that deployed on Heroku.</a>
+
+![screenshot](client/public/landingpage.png)
 
 ## Table of Contents
 * [Description](#description)
@@ -26,7 +28,7 @@ Created using React with a Mongo database, Mongoose schema, and Express to handl
     
 ## Features
 
-<a href="https://media.giphy.com/media/lt0OzKM1MdvbHLF9jg/giphy.gif">
+![demo](https://media.giphy.com/media/lt0OzKM1MdvbHLF9jg/giphy.gif)
 
 * Authentication using Auth0 allows users to login with their Google credentials.
 
@@ -38,7 +40,8 @@ Created using React with a Mongo database, Mongoose schema, and Express to handl
 
 * Users are able to leave reviews for barter or service exchanges from others.
 
-## Contributing Authors
+
+# Contributing Authors
 
 * Natasha Harrington: Auth0, Express, Mongoose, ReactRouter: Set up server and front and back end API routes. Authentication w/Auth0 and routing with ReactRouter. Set up basic boilerplate for models/mongoose Backend code for the edit profile form and for the review form. Deployed site.
 
