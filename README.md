@@ -20,11 +20,13 @@ this4that offers a way for you to get value out of your many talents while explo
 
 this4that is a mobile-first bartering application which allows users to exchange their services and skills with one another. Users have the option to barter directly with one another for a fair exchange of services or users can pay others directly using Paypal. 
 
-# Technologies
+## Technologies
 
 Created using React with a Mongo database, Mongoose schema, and Express to handle routes. User authentication handled by Auth0, chat feature using socket.io, styled with Bootstrap, and payment options connected to PayPal.
     
 ## Features
+
+<a href="https://media.giphy.com/media/lt0OzKM1MdvbHLF9jg/giphy.gif">
 
 * Authentication using Auth0 allows users to login with their Google credentials.
 
@@ -36,7 +38,8 @@ Created using React with a Mongo database, Mongoose schema, and Express to handl
 
 * Users are able to leave reviews for barter or service exchanges from others.
 
-# Contributing Authors
+## Contributing Authors
+
 * Natasha Harrington: Auth0, Express, Mongoose, ReactRouter: Set up server and front and back end API routes. Authentication w/Auth0 and routing with ReactRouter. Set up basic boilerplate for models/mongoose Backend code for the edit profile form and for the review form. Deployed site.
 
 * Ashley Hunt: Wireframing, User Flow, UX/UI, Branding, Bootstrap, Custom CSS, Javascript React Slider
