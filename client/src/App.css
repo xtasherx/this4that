@@ -66,9 +66,32 @@
 
 /* Home Elements */
 .jumbotron {
-  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/cork-board.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.pexels.com/photos/1409215/pexels-photo-1409215.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  background-repeat: no-repeat;
+  background-size: 100%;
   text-align: center;
-  padding: 10em 0 !important;
+  padding: 6em 30px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.jumbotron .container{
+  max-width: 800px !important;
+  margin: 0 auto;
+}
+
+.jumbotron h1 {
+  font-size: 4em;
+  font-weight: 200;
+}
+.jumbotron h3 {
+  line-height: 1.25;
+}
+
+.jumbotron p {
+  font-size: 18px;
 }
 
 /* Profile Page */
@@ -419,7 +442,10 @@ footer .btn-link:hover{
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
+  .jumbotron h1 {
+    font-size: 6em;
+    font-weight: 200;
+  }
 }
 
 /* // Large devices (desktops, 992px and up) */

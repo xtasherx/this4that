@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Row from 'react-bootstrap/Row';
-import {Button, Modal, Form } from 'react-bootstrap';
-// import {NavLink} from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
 import API from '../utils/API';
 import io from 'socket.io-client';
-// import Review from "../components/reviews";
 
 
 // icons
