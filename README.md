@@ -37,10 +37,13 @@ Created using React with a Mongo database, Mongoose schema, and Express to handl
 * Users are able to leave reviews for barter or service exchanges from others.
 
 # Contributing Authors
-* Natasha Harrington: Auth0, file structure, database set up, backend and front end functionality, 
-* Ashley Hunt: UI/UX, front end design
-* Eddie Villarreal: Chat feature and functionality using socket.io, 
-* Casandra Cutter: Payment functionality, seed data, general team support
+* Natasha Harrington: Auth0, Express, Mongoose, ReactRouter: Set up server and front and back end API routes. Authentication w/Auth0 and routing with ReactRouter. Set up basic boilerplate for models/mongoose Backend code for the edit profile form and for the review form. Deployed site.
+
+* Ashley Hunt: Wireframing, User Flow, UX/UI, Branding, Bootstrap, Custom CSS, Javascript React Slider
+
+* Eddie Villarreal: messaging component,  packages  socket.io "server side",   socket.io-client "client side",  set up socket server, set up functions on client side to connect to open sockets on server to send and receive messages though said sockets 
+
+* Casandra Cutter: payment functionality, contributed to search functionality, set up seed data, general team support
     
 # License
 MIT
