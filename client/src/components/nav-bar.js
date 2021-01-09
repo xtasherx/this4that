@@ -15,9 +15,9 @@ const NavBar = () => {
     <Navbar collapseOnSelect expand="lg" className="navBar" variant="dark">
     <Navbar.Brand>
     <img
-        src="https://drive.google.com/file/d/1hz4yRGCb2weQulZ2surJ7Zv9eW7pesZQ/view?usp=sharing"
-        width="100"
-        className="d-inline-block align-top"
+        src="https://github.com/xtasherx/project3/blob/main/client/public/this2that-logo.png?raw=true"
+        width="200"
+        className="d-inline-block align-middle"
         alt="this4that logo"
       />
     </Navbar.Brand> 

@@ -15,12 +15,18 @@ export default function Home () {
         <div>
                 <Jumbotron fluid className="jumbotron" lg="5" alt="Photo by Adonyi Gábor from Pexels">
                         <Container >
-                                <h1 className="homeHead">Swap Your Skills</h1>
-                                <h3>
-                                This4That is an easy and fun way to SAVE MONEY while still obtaining any services you require!  
-                                </h3>
+                                <img
+                                        src="https://github.com/xtasherx/project3/blob/main/client/public/this2that-logo.png?raw=true"
+                                        width="300"
+                                        className="d-inline-block align-middle mb-3"
+                                        alt="this4that logo"
+                                />
+
+                                <h4>
+                                An easy and fun way to SAVE MONEY while still obtaining any services you require!  
+                                </h4>
                                 <p className="my-5">Join the barter community and trade talents and services, in any combination.
-                                This4That offers a way for you to get value out of your many talents while exploring the fantastic abilities of others in your community.  You will also have fun searching, making deals, and will likely meet a few awesome people along the way!
+                                this4that offers a way for you to get value out of your many talents while exploring the fantastic abilities of others in your community.  You will also have fun searching, making deals, and will likely meet a few awesome people along the way!
                                 </p>
                                 <LoginButton className/> &emsp;<SignupButton />
                         </Container>

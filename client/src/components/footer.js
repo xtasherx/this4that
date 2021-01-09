@@ -82,7 +82,7 @@ export default function Footer (props) {
 
 
     return(
-        <footer className="container-fluid text-center main-footer pb-3 pt-5">
+        <footer className="container-fluid text-center main-footer pb-3 pt-5 mt-3">
             <Row className="d-inline-flex">
                 
                 {/* Message Feature */}
@@ -111,7 +111,7 @@ export default function Footer (props) {
                                     )
                                 }
                                 return (
-                                    <p  key={index}>{message.body}</p>
+                                    <p className="reMsg float-end" key={index}>{message.body}</p>
                                 )
                                 })}
                             </div>  
@@ -122,7 +122,7 @@ export default function Footer (props) {
                         </Modal.Body>
 
                         <Modal.Footer>
-                            <Button type="submit" className="btn-primary justify-content-end" onClick={sendMessage}>Send</Button>
+                            <Button type="submit" className="btn authenLogout justify-content-end" onClick={sendMessage}>Send</Button>
                         </Modal.Footer>
                     </Modal>    
 
@@ -133,7 +133,7 @@ export default function Footer (props) {
                 </a>  
                 
 
-                <Button type="button" className="btn btn-link mr-5" value={props.id} onClick={handleButtonClick} >
+                <Button type="button" className="btn btn-link" value={props.id} onClick={handleButtonClick} >
                 <span> < FaPenSquare size={25} /> </span>
                 <p>review</p>
                 </Button>
