@@ -39,6 +39,13 @@
   box-shadow: none !important;
 }
 
+.authenLogin:hover {
+  background-color: #e9bf49 !important;
+  color: #333333 !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
 .authenLogout {
   background-color: #e9bf49 !important;
   color: #333333 !important;
@@ -58,6 +65,13 @@
   box-shadow: none !important;
 }
 
+.authenSignup:hover {
+  background-color: #e9bf49 !important;
+  color: #333333 !important;
+  font-weight: 600 !important;
+  box-shadow: none !important;
+}
+
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{
   max-width: 1200px !important;
   padding: 0 !important;
@@ -70,7 +84,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  padding: 6em 30px !important;
+  padding: 4em 30px !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +92,7 @@
 }
 
 .jumbotron .container{
-  max-width: 800px !important;
+  max-width: 600px !important;
   margin: 0 auto;
 }
 
@@ -86,12 +100,12 @@
   font-size: 3.5em;
   font-weight: 200;
 }
-.jumbotron h3 {
+.jumbotron h4 {
   line-height: 1.25;
 }
 
 .jumbotron p {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 /* Profile Page */
